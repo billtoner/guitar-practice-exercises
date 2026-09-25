@@ -115,3 +115,8 @@ Not all four yet? Stay here — guide-tone recall is the highest-leverage reflex
 ## Next → Week 3: Arpeggios across the neck
 
 You've got the shapes (Week 1) and their essential two notes (Week 2) — but only in a couple of spots. Next we **connect the positions** so you can play any 7th arpeggio anywhere on the neck, in all 12 keys, and never feel trapped in one box.
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 1: Seventh-Chord Arpeggios](week-01-seventh-arpeggios.md) · [All lessons](the-recall-gap-plan.md) · [Week 3: Arpeggios Across the Neck &rarr;](week-03-arpeggios-across-neck.md)

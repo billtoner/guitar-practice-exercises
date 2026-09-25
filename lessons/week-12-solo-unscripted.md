@@ -92,3 +92,8 @@ Improvisation isn't a finish line — it's a practice you return to. To keep gro
 - **Keep recording.** Your monthly clips are the truest map of your progress — far more honest than how any single session felt.
 
 You've closed the recall gap. Now you get to spend the rest of your playing life enjoying the freedom on the other side of it. 🎸
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 11: Space, Tone & Dynamics](week-11-space-tone-dynamics.md) · [All lessons](the-recall-gap-plan.md)

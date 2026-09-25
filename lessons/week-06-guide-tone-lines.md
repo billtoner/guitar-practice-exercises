@@ -100,3 +100,8 @@ You're ready for Week 7 when you can:
 ## Next → Week 7: Chromatic approach notes
 
 Your lines connect smoothly. Now we make them sound *intentional* — approaching each target chord tone from a fret above or below (and sometimes both, an "enclosure"). This is the bebop flavor threaded through Benson and Loeb, and it's what turns a correct line into a hip one.
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 5: Chord-Tone Targeting](week-05-chord-tone-targeting.md) · [All lessons](the-recall-gap-plan.md) · [Week 7: Chromatic Approach &rarr;](week-07-chromatic-approach.md)

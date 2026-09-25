@@ -75,3 +75,8 @@ Not there yet? Trim to the licks you love most and own those completely.
 ## Next → Week 10: Call & response / singing
 
 Now you have vocabulary. Next we connect it to your ear so the phrases come *from you*, not from memory — [sing it, then play it](week-10-call-and-response.md).
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 8: Motif Development](week-08-motif-development.md) · [All lessons](the-recall-gap-plan.md) · [Week 10: Call & Response &rarr;](week-10-call-and-response.md)

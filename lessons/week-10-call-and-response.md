@@ -75,3 +75,8 @@ Not there yet? Shorten the phrases and slow the tempo. This one rewards patience
 ## Next → Week 11: Space, tone & dynamics
 
 You're playing ideas now. Next we make them *sound* like smooth jazz — by playing [fewer of them, with more feel](week-11-space-tone-dynamics.md).
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 9: Vocabulary in All Keys](week-09-vocabulary-all-keys.md) · [All lessons](the-recall-gap-plan.md) · [Week 11: Space, Tone & Dynamics &rarr;](week-11-space-tone-dynamics.md)

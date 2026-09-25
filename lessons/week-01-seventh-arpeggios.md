@@ -118,3 +118,8 @@ Not all four yet? Stay here another few days — Phase 1 is done when the reflex
 ## Next → Week 2: Guide tones (3rds & 7ths)
 
 Once the full arpeggios are reflexive, we **strip them to just the 3rd and 7th** — the two notes that carry the harmony — and learn to grab *those* instantly for any chord you name. That's the bridge from "playing shapes" to "outlining changes."
+
+<!-- lesson-nav -->
+---
+
+[All lessons](the-recall-gap-plan.md) · [Week 2: Guide Tones &rarr;](week-02-guide-tones.md)

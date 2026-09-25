@@ -101,3 +101,8 @@ If you can hum your own solo back, Phase 2 is done — you're no longer decorati
 ## Next → Phase 3: Freedom & your voice (Weeks 9–12)
 
 The mechanics are in place: you can target, connect, approach, and shape ideas. Phase 3 makes it *yours* — building a personal lick vocabulary in all keys (Week 9), closing the ear-to-hands gap with call-and-response and singing (Week 10), mastering space and tone (Week 11), and finally improvising a full, unscripted chorus over a real tune (Week 12). The reflexes are built; now we set them free.
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 7: Chromatic Approach](week-07-chromatic-approach.md) · [All lessons](the-recall-gap-plan.md) · [Week 9: Vocabulary in All Keys &rarr;](week-09-vocabulary-all-keys.md)

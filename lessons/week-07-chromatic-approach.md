@@ -97,3 +97,8 @@ You're ready for Week 8 when you can:
 ## Next → Week 8: Motif development
 
 You now have correct, connected, hip-sounding lines. The last Phase 2 step is the one that separates soloists from scale-players: taking a short **motif** — two, three, four notes — and *developing* it (repeating, sequencing, displacing) so a listener can actually follow and hum your solo. Melody over machinery.
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 6: Guide-Tone Lines](week-06-guide-tone-lines.md) · [All lessons](the-recall-gap-plan.md) · [Week 8: Motif Development &rarr;](week-08-motif-development.md)

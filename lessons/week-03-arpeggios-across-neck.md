@@ -112,3 +112,8 @@ Not all four yet? Stay — neck coverage is what turns "I know the arpeggio" int
 ## Next → Week 4: Dorian & Mixolydian around the arpeggio
 
 You've got the chord tones covering the neck. Next we **fill the gaps between them with scale tones** — Dorian over minor, Mixolydian over dominant — so your lines flow instead of leaping. The arpeggio stays the skeleton; the scale becomes the connective tissue.
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 2: Guide Tones](week-02-guide-tones.md) · [All lessons](the-recall-gap-plan.md) · [Week 4: Modes Around the Arpeggio &rarr;](week-04-modes-around-arpeggio.md)

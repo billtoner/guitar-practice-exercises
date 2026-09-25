@@ -92,3 +92,8 @@ Not there yet? Slow the backing and stay another few days. Targeting is the skil
 ## Next → Week 6: Guide-tone lines through changes
 
 You can hit a good note on the downbeat. Next we **connect those downbeats into a smooth line** — voice-leading the 3rds and 7ths from one chord to the next by the nearest note, so your playing flows through the changes instead of jumping between them. That's the smooth-jazz "glue."
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 4: Modes Around the Arpeggio](week-04-modes-around-arpeggio.md) · [All lessons](the-recall-gap-plan.md) · [Week 6: Guide-Tone Lines &rarr;](week-06-guide-tone-lines.md)

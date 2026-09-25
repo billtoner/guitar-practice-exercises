@@ -119,3 +119,8 @@ Not all four yet? Stay — Phase 1 is the foundation everything in Phases 2 and 
 ## Next → Week 5: Chord-tone targeting
 
 Phase 2 begins. Everything so far has been over *one* chord at a time. Now the chords start **moving**, and the single highest-value improv skill takes center stage: **landing a chord tone on beat 1 of every chord as it changes.** This is where it starts to feel like real improvisation.
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 3: Arpeggios Across the Neck](week-03-arpeggios-across-neck.md) · [All lessons](the-recall-gap-plan.md) · [Week 5: Chord-Tone Targeting &rarr;](week-05-chord-tone-targeting.md)

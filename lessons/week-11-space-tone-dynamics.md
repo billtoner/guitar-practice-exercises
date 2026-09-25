@@ -79,3 +79,8 @@ Not there yet? Do the one-note solo again — it strips everything down to the f
 ## Next → Week 12: Solo over a real song, unscripted
 
 Everything comes together now — targeting, guide tones, approaches, motifs, vocabulary, and space & tone — [over a full tune, cold](week-12-solo-unscripted.md).
+
+<!-- lesson-nav -->
+---
+
+[&larr; Week 10: Call & Response](week-10-call-and-response.md) · [All lessons](the-recall-gap-plan.md) · [Week 12: Solo, Unscripted &rarr;](week-12-solo-unscripted.md)

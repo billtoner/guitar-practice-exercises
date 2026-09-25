@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 4 — Modes Around the Arpeggio</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 1 · Week 4</p>
+  <h1>Modes Around the Arpeggio</h1>
+  <p class="subtitle">Dorian over m7, Mixolydian over dom7 — scale tones travel, chord tones land.</p>
+  <blockquote><p><strong>Phase 1 · Foundations of automaticity.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan. Previous: <a href="week-03-arpeggios-across-neck.html">Week 3 — Arpeggios Across the Neck</a>.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> wrap the <strong>scale around the arpeggio</strong> — <strong>Dorian</strong> over m7, <strong>Mixolydian</strong> over dom7 (and a touch of <strong>Ionian/Lydian</strong> over maj7) — while the chord tones stay the target you resolve to.</p>
+  <p><strong>Why this:</strong> the arpeggio gives you the <em>right</em> notes, but jumping between them sounds like an exercise. The scale fills the gaps so your lines <em>flow</em> — the passing notes are the connective tissue between chord tones. But here's the discipline that separates smooth-jazz phrasing from noodling: the scale tones are how you travel; the <strong>chord tones are where you land.</strong> This is the last brick of Phase 1 and the doorway to targeting in Phase 2.</p>
+
+  <h2>The concept — skeleton and connective tissue</h2>
+  <p>For each chord quality there's a "home" scale that contains the arpeggio and adds the notes between:</p>
+  <table>
+    <thead><tr><th>Chord</th><th>Home scale</th><th>The scale = arpeggio + …</th></tr></thead>
+    <tbody>
+      <tr><td><strong>m7</strong></td><td><strong>Dorian</strong></td><td>the 1–♭3–5–♭7 plus 2, 4, and the bright 6</td></tr>
+      <tr><td><strong>dom7</strong></td><td><strong>Mixolydian</strong></td><td>the 1–3–5–♭7 plus 2, 4, 6</td></tr>
+      <tr><td><strong>maj7</strong></td><td><strong>Ionian</strong> (or <strong>Lydian</strong> for a lift)</td><td>the 1–3–5–7 plus 2, 4(♯4 in Lydian), 6</td></tr>
+    </tbody>
+  </table>
+  <p>Mental model:</p>
+  <ul>
+    <li>The <strong>arpeggio is the skeleton</strong> — the notes that are always "safe" and define the chord.</li>
+    <li>The <strong>scale tones are passing notes</strong> — great in motion, but they want to <em>resolve</em> to a chord tone.</li>
+    <li><strong>Land chord tones on strong beats</strong> (beat 1, beat 3). Let the scale tones fall on the weak beats and the "&"s. Do that and even a plain scale run starts to sound intentional.</li>
+    <li>The notes that most want resolving are the scale's tension tones (the 4th over a maj7, for instance) — leaning on them and then resolving is exactly the Benson/Loeb move.</li>
+  </ul>
+  <p>You already play these scales. The new skill is <em>hearing them as decoration around the arpeggio</em> rather than as patterns in their own right.</p>
+
+  <h2>How to use Fretsy</h2>
+  <p>Add the two modes to your practice pool, but keep drilling them <strong>in the same key and position as the matching arpeggio</strong> so the relationship stays visible.</p>
+  <table>
+    <thead><tr><th>Setting</th><th>Value</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Practice content</td><td>Add <strong>Dorian</strong> and <strong>Mixolydian</strong> alongside the 7th-arpeggios</td><td>Scale and its chord's arpeggio, side by side</td></tr>
+      <tr><td>Display</td><td><strong>Degrees</strong></td><td>See which scale notes are chord tones (1·3·5·7) vs passing tones</td></tr>
+      <tr><td>Drill</td><td><strong>Build the Scale / Mode</strong></td><td>Reinforces the scale's spelling and where the chord tones sit inside it</td></tr>
+      <tr><td>Zoom</td><td><strong>Single position</strong> first, then whole neck</td><td>Learn the scale-around-arpeggio shape in one place, then spread it</td></tr>
+      <tr><td>Pattern</td><td><strong>Straight</strong>, then <strong>In 3rds</strong></td><td>3rds naturally emphasize chord tones — a bridge to musical phrasing</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Honest caveat:</strong> Fretsy will happily play a scale as its own thing; the <em>connection</em> to the arpeggio is the mental work you bring. Draw the arpeggio, then draw its home scale in the same key/position, and consciously see the extra notes filling the gaps.</p>
+
+  <h2>The week at a glance</h2>
+  <p>Pair each scale with its chord, then start blending.</p>
+  <table>
+    <thead><tr><th>Day</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Dorian over m7</strong> — play the arpeggio, then the scale, same key/position (C)</td></tr>
+      <tr><td>2</td><td>Dorian, resolve every phrase to a chord tone on the beat (F, B♭)</td></tr>
+      <tr><td>3</td><td><strong>Mixolydian over dom7</strong> — arpeggio then scale (C7, F7)</td></tr>
+      <tr><td>4</td><td>Mixolydian, chord tones on strong beats</td></tr>
+      <tr><td>5</td><td><strong>Ionian/Lydian over maj7</strong> — taste the ♯4 of Lydian</td></tr>
+      <tr><td>6</td><td>Mix all three: random quality, play scale but target chord tones</td></tr>
+      <tr><td>7</td><td>Free: scales in motion, chord tones on the landings, at tempo</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Warm-up · Fretboard flash — 5 min · Drills tab</h3>
+    <ul>
+      <li><strong>Build the Scale / Mode</strong> — spell Dorian and Mixolydian and, as you go, call out which notes are chord tones.</li>
+      <li>Timer: <strong>Beat the Clock</strong>, <strong>10 s → 5 s</strong>.</li>
+      <li>Micro-drill: name a chord, then name its home scale <em>and</em> the one or two scale notes that most want to resolve.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Reflex drill — 10 min · Practice tab <span style="font-weight:400;color:var(--muted)">(the core of the week)</span></h3>
+    <ul>
+      <li><strong>Lock Key</strong>; draw the <strong>arpeggio</strong>, play it; then draw the <strong>matching mode</strong> in the same key/position and play it, <em>seeing the extra notes as fill</em>.</li>
+      <li>Display <strong>Degrees</strong>, Zoom <strong>single position</strong> (spread to whole neck later in the week).</li>
+      <li><strong>Recall test:</strong> Hands-free auto-advance — name the chord, then play its scale but <strong>stop on a chord tone</strong> each time the count-in lands.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Apply — 10–15 min · Practice tab <span style="font-weight:400;color:var(--muted)">(scale in motion, chord tones on the beat)</span></h3>
+    <ul>
+      <li>Over an external <strong>m7 vamp</strong> (then a <strong>dom7</strong> vamp), improvise using the full <strong>Dorian</strong> (then <strong>Mixolydian</strong>) — but make <strong>beat 1 of each bar a chord tone</strong>, ideally the 3rd or 7th.</li>
+      <li>Use rests. A scale run that pauses on a guide tone sounds like music; one that never lands sounds like practice. <em>(Fretsy's planned "Changes Mode" will let you drill this against moving chords in-app.)</em></li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Ear + steal — 5–10 min · Drills tab</h3>
+    <ul>
+      <li><strong>Scale/Mode by Ear</strong> — start telling Dorian from Mixolydian (listen for the natural 3rd vs ♭3 and the ♭7 they share).</li>
+      <li>Steal: grab a flowing Chuck Loeb or Peter White run and mark where the scale tones <em>pass through</em> and where the line <em>lands</em> on a chord tone.</li>
+    </ul>
+  </div>
+
+  <h2>Tempo ladder (blocks ② and ③)</h2>
+  <pre><code>Start:   60 BPM · scale up, chord tone on beat 1
+Rule:    lands are clean &amp; intentional 3× in a row → Speed Trainer +5 BPM
+Ceiling: ~90 BPM, then add In-3rds phrasing at 60 and climb again
+Law:     scale tones travel, chord tones land — never blur the two</code></pre>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"It just sounds like scales again."</strong> You're not resolving. Force a chord tone onto every beat 1; the scale instantly stops sounding like an exercise.</li>
+    <li><strong>"Which scale over which chord?"</strong> Dorian→m7, Mixolydian→dom7, Ionian/Lydian→maj7. When in doubt, fall back to the arpeggio — the chord tones are always right.</li>
+    <li><strong>"Dorian and Mixolydian feel the same."</strong> They share the ♭7; the giveaway is the <strong>3rd</strong> (♭3 in Dorian, natural in Mixolydian). Toggle just that note to feel the difference.</li>
+    <li><strong>"I keep landing on tension notes."</strong> Good ear-training moment — notice the itch, then resolve it down or up a step to a chord tone. That resolution <em>is</em> the smooth-jazz sound.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <p>You've completed Phase 1 when you can:</p>
+  <ul class="check">
+    <li>Play <strong>Dorian over m7</strong> and <strong>Mixolydian over dom7</strong> in a position, seeing the arpeggio inside each.</li>
+    <li>Consistently <strong>resolve to a chord tone on strong beats</strong> while a scale is in motion.</li>
+    <li>Improvise a short line over a vamp that flows <em>and</em> lands — sounds like music, not exercises.</li>
+    <li>Tell Dorian from Mixolydian by ear more often than not.</li>
+  </ul>
+  <p>Not all four yet? Stay — Phase 1 is the foundation everything in Phases 2 and 3 is built on. Solid here means fast everywhere later.</p>
+
+  <h2>Next → Week 5: Chord-tone targeting</h2>
+  <p>Phase 2 begins. Everything so far has been over <em>one</em> chord at a time. Now the chords start <strong>moving</strong>, and the single highest-value improv skill takes center stage: <strong>landing a chord tone on beat 1 of every chord as it changes.</strong> This is where it starts to feel like real improvisation.</p>
+
+  <p class="print-hint">The Recall Gap · Week 4 — Modes Around the Arpeggio</p>
+</article>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 12 — Solo, Unscripted</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 3 · Week 12</p>
+  <h1>Solo, Unscripted</h1>
+  <p class="subtitle">A full chorus over a real tune, cold — the proof it all worked.</p>
+  <blockquote><p><strong>Phase 3 · Freedom &amp; your voice.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> improvise a <strong>full chorus</strong> over a smooth-jazz tune you already play — <strong>cold, no memorized solo</strong> — record it, and compare it to your Week 1 clip.</p>
+  <p><strong>Why this:</strong> this is the proof, and the integration. Everything from the last 11 weeks — instant chord tones, guide-tone lines, chromatic approaches, motif development, owned vocabulary, and space &amp; tone — meets a real song form under real-time pressure. This week you find out that the recall gap has closed.</p>
+
+  <h2>The integration</h2>
+  <p>You're no longer drilling ingredients; you're cooking. Over a tune's changes you'll target chord tones on strong beats (Wk 5–7), voice-lead guide tones through the ii–V's (Wk 6), state and develop a motif (Wk 8), reach for owned vocabulary when you want it (Wk 9), play lines you actually <em>hear</em> (Wk 10), and leave space with a warm tone (Wk 11).</p>
+  <p>You won't do all of it every chorus — nobody does. You'll do <em>some</em> of it, on purpose, and it will sound like music.</p>
+
+  <h2>The process</h2>
+  <ul>
+    <li><strong>Pick the tune</strong> — one you already play and love: a Benson, Peter White, Loeb, or Euge Groove number, or a standard you know cold.</li>
+    <li><strong>Get a backing track</strong> — solo over the real recording, an iReal Pro chart, or a YouTube backing track. <em>(This is exactly where your partner's future backing tracks — or Fretsy's planned "Changes Mode" as a visual guide — will eventually live.)</em></li>
+    <li><strong>Improvise a full chorus, cold.</strong> No pre-planned solo. Record it.</li>
+    <li><strong>Self-assess</strong> against the rubric below. Then do it again.</li>
+  </ul>
+
+  <h2>Fretsy's role</h2>
+  <p>Minimal, by design — this is you, a tune, a track, and a recorder. Fretsy earned its keep in Weeks 1–9 building the reflexes you're now spending. Use its ear drills as a warm-up if you like, then play the music.</p>
+
+  <h2>The week at a glance</h2>
+  <table>
+    <thead><tr><th>Day</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Choose tune + backing track; learn the form cold (chords/sections)</td></tr>
+      <tr><td>2</td><td>A chorus focused on <strong>chord-tone targeting</strong></td></tr>
+      <tr><td>3</td><td>A chorus focused on <strong>guide-tone lines</strong> through the changes</td></tr>
+      <tr><td>4</td><td>A chorus focused on <strong>motif + space</strong></td></tr>
+      <tr><td>5</td><td>A full, <strong>unconstrained</strong> chorus — record it</td></tr>
+      <tr><td>6</td><td>Two or three takes; keep the best</td></tr>
+      <tr><td>7</td><td>Compare to your Week 1 clip; note the growth</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Ear/hands warm-up — 5 min</h3>
+    <ul>
+      <li>A few arpeggio or ear reps to get loose. Nothing heavy.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Know the form — 5–10 min</h3>
+    <ul>
+      <li>Play through the tune's changes until the map is under your fingers. You can't improvise freely on a form you're still reading.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Improvise &amp; record — 15 min · over the track</h3>
+    <ul>
+      <li>A full chorus, cold, no script. Multiple takes. Let the bad ones be bad.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Self-assess — 5 min · the rubric</h3>
+    <p>Rate each take honestly:</p>
+<pre><code>□ Did I land chord tones on strong beats?
+□ Did a motif appear and develop?
+□ Did it breathe — real space?
+□ Warm, intentional tone?
+□ Did it sound like ME?</code></pre>
+  </div>
+
+  <h2>Approach</h2>
+  <p>Don't chase perfect — chase <em>musical and honest</em>. A simple chorus that hits chord tones, breathes, and says something beats a flurry that says nothing. And compare only to your own <strong>Week 1 recording</strong>, never to Benson.</p>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"I get lost in the form."</strong> Back to block ②. Freedom needs the map to be automatic. Simplify: outline just the guide tones through the changes until the form is second nature.</li>
+    <li><strong>"It falls apart when I stop thinking."</strong> Constrain the next take to one rule (e.g. chord tones on beat 1 only). Freedom still grows out of constraints.</li>
+    <li><strong>"It doesn't sound like Benson."</strong> It's not supposed to. It's supposed to sound like <em>you, now</em> — and better than you 12 weeks ago. That's the only fair comparison.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <ul class="check">
+    <li>A recorded, improvised <strong>full chorus</strong> over a real tune — no memorized solo.</li>
+    <li>It sounds intentional and musical: chord tones on strong beats, some space, a warm tone.</li>
+    <li><strong>Audible growth</strong> vs your Week 1 recording.</li>
+    <li>You used, unplanned, at least <strong>two</strong> things from Weeks 5–11.</li>
+  </ul>
+
+  <h2>Beyond Week 12: the loop keeps going</h2>
+  <p>Improvisation isn't a finish line — it's a practice you return to. To keep growing:</p>
+  <ul>
+    <li><strong>Re-run the plan</strong> at faster tempos and in new or harder keys; the reflexes deepen with each pass.</li>
+    <li><strong>Learn and transcribe new tunes</strong> — every tune teaches new vocabulary and new changes.</li>
+    <li><strong>Build a repertoire</strong> of songs you can solo over cold, and keep stealing licks from the players you love.</li>
+    <li><strong>Keep recording.</strong> Your monthly clips are the truest map of your progress — far more honest than how any single session felt.</li>
+  </ul>
+  <p>You've closed the recall gap. Now you get to spend the rest of your playing life enjoying the freedom on the other side of it. 🎸</p>
+
+  <p class="print-hint">The Recall Gap · Week 12 — Solo, Unscripted</p>
+</article>
+</body>
+</html>

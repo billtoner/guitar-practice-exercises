@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 10 — Call &amp; Response</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 3 · Week 10</p>
+  <h1>Call &amp; Response</h1>
+  <p class="subtitle">Sing it, then find it — close the gap between ear and hands.</p>
+  <blockquote><p><strong>Phase 3 · Freedom &amp; your voice.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> <strong>sing a phrase, then find it</strong> on the guitar — and trade <strong>4-bar phrases</strong> with a recording (it calls, you respond; then you call and answer yourself).</p>
+  <p><strong>Why this:</strong> your ear is already ahead of your hands. You can hum a line you can't yet play. Improvisation lives in closing that gap — playing what you <em>hear</em> instead of what your fingers happen to fall into. This is the week your solos stop being finger patterns and start being ideas.</p>
+
+  <h2>Audiation — hear it first</h2>
+  <p><strong>Audiation</strong> is hearing music in your mind before you play it. Every strong improviser does it — the line exists as <em>intention</em> a beat before it exists as sound. The bridge from intention to instrument is <strong>sing-then-find</strong>: if you can sing it, you can learn to find it, and with reps the finding becomes near-instant.</p>
+  <p><strong>Call-and-response</strong> is the training drill. A phrase is offered — by a recording, or by your own voice — and you answer it: same length, related idea. It forces real-time listening and responding, which is exactly what soloing over changes <em>is</em>.</p>
+
+  <h2>Honest note: this week is mostly off the app</h2>
+  <p>Fretsy has no microphone or sing-back feature — that's a deliberate design choice, not a gap to wait on. So the core of Week 10 is <strong>your voice + your guitar + a backing track + a recorder.</strong> Fretsy still helps at the edges: the <strong>Interval-by-Ear</strong> and <strong>Which-Degree-by-Ear</strong> drills sharpen the ear this week leans on. Use them as a warm-up, then put the app down and sing.</p>
+
+  <h2>How to practice it</h2>
+  <ul>
+    <li>Sing a short, simple phrase (2–4 notes at first), then find it on the guitar. Repeat until finding it is fast.</li>
+    <li>Over a slow vamp: sing a 2-bar idea, then play it back.</li>
+    <li>Call-and-response with a track: let 4 bars play (the "call"), respond with your own 4 bars.</li>
+    <li>Advanced (Benson's signature): sing <strong>and</strong> play the same line at once — even roughly. Nothing locks ear to hands faster.</li>
+  </ul>
+
+  <h2>The week at a glance</h2>
+  <table>
+    <thead><tr><th>Day</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td>1–2</td><td>Sing-then-find, 2–4 note phrases, slow</td></tr>
+      <tr><td>3–4</td><td>Sing a 2-bar idea over a vamp, then play it</td></tr>
+      <tr><td>5–6</td><td>Trade 4-bar phrases with a backing track</td></tr>
+      <tr><td>7</td><td>Sing-and-play together (Benson-style) — rough is fine</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Ear warm-up — 5 min · Drills tab</h3>
+    <ul>
+      <li><strong>Interval-by-Ear</strong> / <strong>Which-Degree-by-Ear</strong>. Then put Fretsy down — the rest is voice and guitar.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Sing-then-find — 10 min</h3>
+    <ul>
+      <li>Voice → guitar. Slow. No metronome needed early. Get the round-trip fast.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Over a track — 10–15 min</h3>
+    <ul>
+      <li>Sing an idea, then play it back. Then <strong>trade 4s</strong> with the recording. Record the session.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Reflect — 5 min</h3>
+    <ul>
+      <li>Listen back. Did what you <em>played</em> match what you <em>sang</em>? Where did the hands substitute a familiar pattern for the idea you actually heard?</li>
+    </ul>
+  </div>
+
+  <h2>Approach</h2>
+  <p>Sing constantly, even out of tune — pitch accuracy improves quickly and isn't the point yet. The point is <strong>intention before execution</strong>. Keep tempos slow enough that you can genuinely hear a beat ahead.</p>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"I can't sing in tune."</strong> Doesn't matter here — you're training the connection, not auditioning. It sharpens with reps.</li>
+    <li><strong>"My hands play something different from what I sang."</strong> That gap, made audible, <em>is</em> the work. Slow down; sing shorter phrases; find them one note at a time.</li>
+    <li><strong>"I run out of ideas responding to the call."</strong> Start by echoing the call almost exactly, then change one thing. A response isn't a brand-new invention — it's a reply.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <ul class="check">
+    <li>Sing a short melody and find it on the guitar within a couple of tries.</li>
+    <li>Trade coherent 4-bar phrases with a backing track — your responses relate to the calls.</li>
+    <li>Caught yourself, at least once, playing a line you clearly <strong>heard first</strong>.</li>
+  </ul>
+  <p>Not there yet? Shorten the phrases and slow the tempo. This one rewards patience more than any other week.</p>
+
+  <h2>Next → Week 11: Space, tone &amp; dynamics</h2>
+  <p>You're playing ideas now. Next we make them <em>sound</em> like smooth jazz — by playing <a href="week-11-space-tone-dynamics.html">fewer of them, with more feel</a>.</p>
+
+  <p class="print-hint">The Recall Gap · Week 10 — Call &amp; Response</p>
+</article>
+</body>
+</html>

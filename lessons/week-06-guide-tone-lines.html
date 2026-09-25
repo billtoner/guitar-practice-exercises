@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 6 — Guide-Tone Lines</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 2 · Week 6</p>
+  <h1>Guide-Tone Lines Through Changes</h1>
+  <p class="subtitle">Voice-lead the 3rds &amp; 7ths from chord to chord — the smooth-jazz "glue."</p>
+  <blockquote><p><strong>Phase 2 · Connecting &amp; phrasing.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> play a smooth <strong>3rd-and-7th line</strong> through a ii–V–I — moving from each chord's guide tone to the next chord's guide tone <strong>by the nearest note</strong>, with no big leaps.</p>
+  <p><strong>Why this is the smooth-jazz "glue":</strong> last week you hit good notes <em>on</em> the downbeats. This week you <strong>connect</strong> them. When the 7th of one chord slides a half-step into the 3rd of the next, the harmony seems to move itself — that inevitable, gliding quality under Chuck Loeb and Peter White lines is mostly this. It's also the most economical thing on the guitar: the notes barely move.</p>
+
+  <h2>The concept — 7ths fall into 3rds</h2>
+  <p>Over a ii–V–I, the guide tones are almost already a melody; you just have to <em>notice</em> it. In <strong>Dm7 → G7 → Cmaj7</strong>:</p>
+  <table>
+    <thead><tr><th>Chord</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td>Dm7</td><td>F</td><td>C</td></tr>
+      <tr><td>G7</td><td>B</td><td>F</td></tr>
+      <tr><td>Cmaj7</td><td>E</td><td>B</td></tr>
+    </tbody>
+  </table>
+  <p>Two smooth lines fall out, each moving by a half or whole step:</p>
+  <pre><code>Line A (7→3→…):  C  →  B  →  B      (7th of Dm7 → 3rd of G7 → 7th of Cmaj7)
+Line B (3→7→…):  F  →  F  →  E      (3rd of Dm7 → 7th of G7 → 3rd of Cmaj7)</code></pre>
+  <p>Notice the resolutions: the <strong>7th of one chord drops a half-step to the 3rd of the next</strong> (C→B, F→E). That falling half-step is the sound of a ii–V resolving. Nearest note wins — never jump when a neighbor will do.</p>
+  <blockquote><p><strong>Honest note on Fretsy:</strong> the <em>line</em> is played over a moving progression, so the <strong>Apply</strong> block again uses an external ii–V–I backing track (YouTube / iReal Pro). Fretsy is perfect for the <strong>reflex</strong> half: drilling the 3rd and 7th of each chord (your Week 2 skill) in the progression's key so you can find the guide tones instantly.</p></blockquote>
+
+  <h2>The week at a glance</h2>
+  <table>
+    <thead><tr><th>Day</th><th>Focus</th><th>Backing</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Find &amp; say the 3rd/7th of each chord</td><td>none — just the guitar</td></tr>
+      <tr><td>2</td><td>Play <strong>Line A</strong> (7→3→7) slowly</td><td>ii–V–I in C</td></tr>
+      <tr><td>3</td><td>Play <strong>Line B</strong> (3→7→3) slowly</td><td>ii–V–I in C</td></tr>
+      <tr><td>4</td><td>Either line, second key</td><td>ii–V–I in F</td></tr>
+      <tr><td>5</td><td>Line + <strong>one passing note</strong></td><td>ii–V–I, slow</td></tr>
+      <tr><td>6</td><td>Choose which line by ear as it plays</td><td>ii–V–I, two keys</td></tr>
+      <tr><td>7</td><td>Guide-tone line as the <em>spine</em> of a short solo</td><td>ii–V–I, two keys</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Warm-up · Fretboard flash — 5 min · Drills tab</h3>
+    <ul>
+      <li><strong>Scale Degree</strong> drill focused on <strong>3rds and 7ths</strong>. Beat the Clock ~7 s.</li>
+      <li>Spoken: call the day's ii–V–I and recite both guide-tone lines (C→B→B, F→F→E) before playing.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Reflex drill — 10 min · Practice tab <span style="font-weight:400;color:var(--muted)">(guide tones, per chord)</span></h3>
+    <ul>
+      <li>Filter to the three 7th arpeggios; <strong>Lock Key</strong> to the day's key; Display <strong>Degrees</strong>.</li>
+      <li>For each chord in the progression, find <strong>only its 3rd and 7th</strong> near your current hand position — don't run the whole arpeggio. Speed target: guide tones located in <strong>under a second</strong>, on both the 6th- and 5th-string-root shapes.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Apply — 10–15 min · external ii–V–I backing track <span style="font-weight:400;color:var(--muted)">(build the line)</span></h3>
+    <ul>
+      <li>Play <strong>only the guide-tone line</strong> through the progression — two or three notes per cycle, all by nearest motion. It should feel almost too simple.</li>
+      <li>When smooth, add <strong>one passing or approach note</strong> between guide tones (a single connector, not a scale run).</li>
+      <li>Keep it slow (60–75 BPM). <strong>Record 30 s;</strong> listen for whether the line <em>glides</em> or <em>jumps</em>.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Ear + steal — 5–10 min</h3>
+    <ul>
+      <li><strong>Interval by Ear</strong> (Drills), focus on the half-step and whole-step — the intervals guide-tone lines live on.</li>
+      <li><strong>Steal:</strong> in a Peter White or Norman Brown phrase over a ii–V, find the falling half-step (7→3). Play it. That one resolution is a whole vocabulary.</li>
+    </ul>
+  </div>
+
+  <h2>Tempo ladder (block ③)</h2>
+  <pre><code>Start:   60 BPM · bare guide-tone line, nearest note only
+Step 2:  70 BPM · one passing note between guide tones
+Step 3:  keep tempo, add a second key
+Law:     if it leaps, you missed a nearer note — find it</code></pre>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"My line jumps around."</strong> You're grabbing the guide tone in a <em>far</em> octave. Stay in one small zone of the neck and take the <strong>closest</strong> 3rd/7th, even if it's on a different string right next to you.</li>
+    <li><strong>"It sounds like an exercise, not music."</strong> That's expected for a few days — the bare line is scaffolding. The single passing note (Day 5) and next week's approach notes turn it into a phrase.</li>
+    <li><strong>"I lose which line I'm on."</strong> Pick ONE line (A or B) and stay on it for the whole loop. Switching mid-stream is a Day-6 skill.</li>
+    <li><strong>"I can't find the nearest note fast enough."</strong> Back to Fretsy block ②: this is a guide-tone recall gap, and it's exactly what Week 2 built. Re-drill it.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <p>You're ready for Week 7 when you can:</p>
+  <ul class="check">
+    <li>Play a <strong>smooth guide-tone line</strong> through a ii–V–I in two keys with <strong>no leaps</strong> — all half/whole-step motion.</li>
+    <li>Hear and play the <strong>7→3 falling resolution</strong> on the ii–V.</li>
+    <li>Insert <strong>one passing note</strong> between guide tones without losing the line.</li>
+    <li>Use the guide-tone line as the <strong>spine</strong> of a short improvised phrase.</li>
+  </ul>
+
+  <h2>Next → Week 7: Chromatic approach notes</h2>
+  <p>Your lines connect smoothly. Now we make them sound <em>intentional</em> — approaching each target chord tone from a fret above or below (and sometimes both, an "enclosure"). This is the bebop flavor threaded through Benson and Loeb, and it's what turns a correct line into a hip one.</p>
+
+  <p class="print-hint">The Recall Gap · Week 6 — Guide-Tone Lines</p>
+</article>
+</body>
+</html>

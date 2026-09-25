@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 3 — Arpeggios Across the Neck</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 1 · Week 3</p>
+  <h1>Arpeggios Across the Neck</h1>
+  <p class="subtitle">One arpeggio, many doorways — coverage in all 12 keys.</p>
+  <blockquote><p><strong>Phase 1 · Foundations of automaticity.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan. Previous: <a href="week-02-guide-tones.html">Week 2 — Guide Tones</a>.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> connect the 6th- and 5th-string shapes (and beyond) into <strong>one arpeggio that spans the fretboard</strong> — so you can play any m7/dom7/maj7 in <strong>at least two positions</strong>, in <strong>all 12 keys</strong>.</p>
+  <p><strong>Why this:</strong> improvisation needs <em>neck coverage</em>. If you can only play a Gmaj7 arpeggio in one box, then when a phrase or a chord change leaves you somewhere else on the neck, you freeze. Great players are never trapped — wherever their hand happens to be, the chord tones are right there. This week removes the "wrong part of the neck" excuse for good.</p>
+
+  <h2>The concept — one arpeggio, many doorways</h2>
+  <p>You already own two doorways into each arpeggio: the 6th-string root and the 5th-string root. They aren't separate things to memorize — they're the <strong>same notes</strong> in different places, and they <strong>overlap</strong>. The skill this week is <em>linking</em>: playing up through the 6th-string shape and, instead of stopping, shifting into the 5th-string shape (and onward) so the arpeggio keeps climbing the neck as one continuous line.</p>
+  <ul>
+    <li>Think of it as <strong>CAGED-style position linking</strong> — each shape hands off to the next where they share notes.</li>
+    <li>The <strong>shift point</strong> is usually a shared chord tone: you land on a note that belongs to both shapes and let your hand slide into the new position there.</li>
+    <li>Your anchors are still the <strong>guide tones</strong> from Week 2. As you move across the neck, keep asking "where's the nearest 3rd? the nearest 7th?" — that's what keeps you oriented instead of just running patterns.</li>
+  </ul>
+  <p>Two positions is the goal this week; more is a bonus. Depth (two rock-solid positions in all keys) beats breadth (five shaky ones).</p>
+
+  <h2>How to use Fretsy</h2>
+  <p>This is the week to open up the neck view and let the randomizer roam all 12 keys.</p>
+  <table>
+    <thead><tr><th>Setting</th><th>Value</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Practice content</td><td>The three 7th-arpeggios (m7 / dom7 / maj7)</td><td>Same vocabulary, now across the whole neck</td></tr>
+      <tr><td>Zoom</td><td><strong>Whole neck</strong> (not single position)</td><td>See how the shapes connect rather than as isolated boxes</td></tr>
+      <tr><td>CAGED positions</td><td><strong>Step through them</strong></td><td>Walk the same arpeggio up the neck, position to position</td></tr>
+      <tr><td>Key</td><td><strong>Unlocked</strong> — let all 12 be drawn</td><td>Neck coverage means every key, not just the friendly ones</td></tr>
+      <tr><td>Direction</td><td><strong>Both</strong></td><td>Climb up through the shapes and back down</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Honest caveat:</strong> the CAGED/position-stepping controls are yours to confirm by name — but the idea is what matters: use whatever Fretsy gives you to see the <em>same</em> arpeggio in a <em>different</em> place, then physically link the two.</p>
+
+  <h2>The week at a glance</h2>
+  <p>This week we stop marching through fixed keys and start letting them come at random — because coverage is the whole point.</p>
+  <table>
+    <thead><tr><th>Day</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Link 6th- &amp; 5th-string shapes of <strong>one</strong> arpeggio (key of C), slowly</td></tr>
+      <tr><td>2</td><td>Same linking, key of F, then B♭</td></tr>
+      <tr><td>3</td><td>Run one arpeggio up the <strong>whole neck</strong> and back, two keys</td></tr>
+      <tr><td>4</td><td>Random <strong>key</strong>, fixed quality (m7) — find two positions</td></tr>
+      <tr><td>5</td><td>Random key, fixed quality (dom7), then maj7</td></tr>
+      <tr><td>6</td><td>Random key <strong>and</strong> random quality — two positions each</td></tr>
+      <tr><td>7</td><td>Whole-neck runs in random keys at tempo</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Warm-up · Fretboard flash — 5 min · Drills tab</h3>
+    <ul>
+      <li><strong>Name the Note</strong> across the <strong>whole neck</strong> (not just low positions) — you need to know where every note lives to link shapes.</li>
+      <li>Timer: <strong>Beat the Clock</strong>, <strong>10 s → 5 s</strong>.</li>
+      <li>Micro-drill: pick a random key, name where the root sits on both the 6th and 5th strings before you play.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Reflex drill — 10 min · Practice tab <span style="font-weight:400;color:var(--muted)">(the core of the week)</span></h3>
+    <ul>
+      <li><strong>Lock Key</strong> (days 1–3) or <strong>unlock Key</strong> (days 4–7); Zoom <strong>whole neck</strong>; step <strong>CAGED positions</strong>.</li>
+      <li>Play the arpeggio in position 1, then <strong>link into position 2</strong> without stopping — find the shared note and shift there.</li>
+      <li>Direction <strong>Both</strong>. Keep the guide tones (3 &amp; 7) in mind as your anchors in each position.</li>
+      <li><strong>Recall test:</strong> Hands-free auto-advance, <strong>~4 s → 2 s</strong> — but now the win is landing the arpeggio <em>in whichever position is nearest your hand</em>, not always the low one.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Apply — 10–15 min · Practice tab <span style="font-weight:400;color:var(--muted)">(cover the whole neck)</span></h3>
+    <ul>
+      <li><strong>Loop ON</strong>, Pattern <strong>In 3rds</strong> / <strong>Groups of 4</strong>, Direction <strong>Both</strong>, Zoom <strong>whole neck</strong>.</li>
+      <li>Run the arpeggio from the lowest position to the highest and back as one flowing line. Then let the key randomize and do it cold.</li>
+      <li><em>Improv seed:</em> over an external m7 vamp, deliberately start your phrases in a <strong>high</strong> position one time and a <strong>low</strong> position the next — prove to yourself you're not trapped.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Ear + steal — 5–10 min · Drills tab</h3>
+    <ul>
+      <li><strong>Chord Quality by Ear</strong> as usual (keep the ear sharp).</li>
+      <li>Steal: take a Norman Brown or George Benson lick and find it in <strong>two</strong> different places on the neck. Same notes, different doorway.</li>
+    </ul>
+  </div>
+
+  <h2>Tempo ladder (blocks ② and ③)</h2>
+  <pre><code>Start:   60 BPM · one position, then link to the next cleanly
+Rule:    clean link 3× in a row → Speed Trainer +5 BPM
+Ceiling: ~90 BPM across two positions, then add a third position
+Law:     a clean shift beats a fast fumble — the join is the skill</code></pre>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"I lose my place when I shift positions."</strong> Slow the shift way down and find the <strong>shared note</strong> that lives in both shapes — that note is your handoff. Practice just the two-note hand-off in isolation.</li>
+    <li><strong>"Some keys feel impossible."</strong> Those are exactly the keys worth the most reps. Lock the hard key for a whole session; familiarity is the only cure.</li>
+    <li><strong>"The high positions feel cramped."</strong> They are — the frets are closer together. Adjust your hand, don't avoid them. Benson lives up there.</li>
+    <li><strong>"I default to the same box every time."</strong> Force the issue: forbid yourself the low position for one Apply block and only play above the 7th fret.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <p>You're ready for Week 4 when you can:</p>
+  <ul class="check">
+    <li>Play any <strong>m7 / dom7 / maj7</strong> arpeggio in <strong>at least two positions</strong>, in <strong>any of the 12 keys</strong>.</li>
+    <li><strong>Link</strong> two positions into one continuous line, ascending and descending, cleanly.</li>
+    <li>Do it at <strong>~90 BPM</strong> without the shift falling apart.</li>
+    <li>Start an improvised phrase from a <strong>high</strong> or <strong>low</strong> position on demand.</li>
+  </ul>
+  <p>Not all four yet? Stay — neck coverage is what turns "I know the arpeggio" into "I can use it anywhere."</p>
+
+  <h2>Next → Week 4: Dorian &amp; Mixolydian around the arpeggio</h2>
+  <p>You've got the chord tones covering the neck. Next we <strong>fill the gaps between them with scale tones</strong> — Dorian over minor, Mixolydian over dominant — so your lines flow instead of leaping. The arpeggio stays the skeleton; the scale becomes the connective tissue.</p>
+
+  <p class="print-hint">The Recall Gap · Week 3 — Arpeggios Across the Neck</p>
+</article>
+</body>
+</html>

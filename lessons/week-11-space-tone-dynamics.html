@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 11 — Space, Tone &amp; Dynamics</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 3 · Week 11</p>
+  <h1>Space, Tone &amp; Dynamics</h1>
+  <p class="subtitle">Half the notes, twice the feel — the real "smooth" sound.</p>
+  <blockquote><p><strong>Phase 3 · Freedom &amp; your voice.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> improvise using <strong>half the notes</strong> — and spend what you save on <strong>space, tone, and touch</strong>: rests, bends, slides, vibrato, dynamics, and a warm thumb/finger attack.</p>
+  <p><strong>Why this:</strong> here's the open secret about Benson ballads, Peter White, and Chuck Loeb — a huge part of why they sound "smooth" isn't the notes, it's everything <em>around</em> them. Space lets a phrase land. Tone and vibrato make one note say more than a run. This is roughly 80% of the "pro" sound, and almost none of it is about playing more.</p>
+
+  <h2>Less is more — let it breathe</h2>
+  <p>A phrase needs silence around it the way a sentence needs a pause. Beginners fill every beat; pros leave room, and the room is where the music lives. Play a short idea, then <strong>stop</strong> — and let the track answer before you speak again.</p>
+  <p>Then there's <strong>tone and articulation</strong>. A note bent into pitch, slid into, or given a slow vibrato carries feeling a cleanly-picked note doesn't. Attack matters too — thumb or fingers, soft, on the neck pickup, gives that round smooth-jazz voice. The same notes with a hard bridge-pickup attack are a different, colder song.</p>
+
+  <h2>Fretsy's role here is small — and that's fine</h2>
+  <p>This is a feel-and-recording week, over backing tracks. The one genuinely useful Fretsy piece is the <strong>Tone chain (Pro)</strong> — dial in a warm, round, neck-pickup-ish sound with a soft attack and a touch of reverb, so your ear is chasing the right target while you practice. Beyond that, put the app down: this is hands, ears, and a recorder.</p>
+
+  <h2>How to practice it</h2>
+  <ul>
+    <li><strong>The half-notes rule</strong> — improvise a chorus using no more than half the notes you normally would. Force the rests.</li>
+    <li><strong>One-note solo</strong> — improvise on a <em>single</em> note; all expression comes from rhythm, dynamics, bends, and vibrato. It reveals how much lives in touch alone.</li>
+    <li><strong>Vibrato &amp; bends</strong> — isolate them. Slow, even vibrato on held chord tones (3rds, 7ths). Bend <em>into</em> a target tone rather than away from it.</li>
+    <li><strong>Dynamics</strong> — play a phrase soft, then repeat it loud. Make volume a deliberate choice.</li>
+  </ul>
+
+  <h2>The week at a glance</h2>
+  <table>
+    <thead><tr><th>Day</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>The half-notes rule over a vamp</td></tr>
+      <tr><td>2</td><td>One-note solo — all feel</td></tr>
+      <tr><td>3</td><td>Vibrato drill on held guide tones</td></tr>
+      <tr><td>4</td><td>Bends &amp; slides into chord tones</td></tr>
+      <tr><td>5</td><td>Dynamics — soft/loud phrasing</td></tr>
+      <tr><td>6</td><td>Combine: a sparse, expressive chorus</td></tr>
+      <tr><td>7</td><td>Record a chorus that breathes; listen back</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Tone check — 3–5 min · Fretsy Tone chain or your amp</h3>
+    <ul>
+      <li>Dial the warm, round sound: neck pickup, soft attack, a little reverb. Get the target in your ears before you play.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Technique isolation — 10 min</h3>
+    <ul>
+      <li>The day's expressive element (vibrato / bends / dynamics), slow, on <strong>held chord tones</strong> — that's where it's most exposed and most beautiful.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Sparse improv — 10–15 min · over a track</h3>
+    <ul>
+      <li>The half-notes rule. Count the rests as music, not gaps to fill.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Record &amp; listen — 5 min</h3>
+    <ul>
+      <li>Does it breathe? Mark the moments you rushed to fill silence — those are next session's targets.</li>
+    </ul>
+  </div>
+
+  <h2>Approach</h2>
+  <p>Fight the urge to fill space — that urge is the exact habit we're breaking. When in doubt, leave it out, and let the next note matter more. Tempos slow to moderate; feel over flash, always.</p>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"Silence feels awkward."</strong> It always does — to the <em>player</em>, never to the listener. Record and play it back; from the outside the space sounds intentional and confident.</li>
+    <li><strong>"My vibrato sounds nervous / uneven."</strong> Slow it way down; make it a deliberate, wide, even wave on a held note. Fast twitchy vibrato is a tension tell.</li>
+    <li><strong>"Half the notes feels boring to play."</strong> Boring to play often sounds <em>great</em> to hear. Trust the recording, not the in-the-moment feeling.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <ul class="check">
+    <li>Record a solo that clearly <strong>breathes</strong> — real rests, not wall-to-wall notes.</li>
+    <li>Expressive, controlled <strong>vibrato</strong> and at least one <strong>bend into</strong> a chord tone.</li>
+    <li>A <strong>dynamic contrast</strong> you placed on purpose (a soft phrase, a louder answer).</li>
+    <li>A <strong>warm tone</strong> you're genuinely happy with.</li>
+  </ul>
+  <p>Not there yet? Do the one-note solo again — it strips everything down to the feel you're building.</p>
+
+  <h2>Next → Week 12: Solo over a real song, unscripted</h2>
+  <p>Everything comes together now — targeting, guide tones, approaches, motifs, vocabulary, and space &amp; tone — <a href="week-12-solo-unscripted.html">over a full tune, cold</a>.</p>
+
+  <p class="print-hint">The Recall Gap · Week 11 — Space, Tone &amp; Dynamics</p>
+</article>
+</body>
+</html>

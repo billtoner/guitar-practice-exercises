@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 8 — Motif Development</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 2 · Week 8</p>
+  <h1>Motif Development</h1>
+  <p class="subtitle">State a small idea and develop it — melody over machinery.</p>
+  <blockquote><p><strong>Phase 2 · Connecting &amp; phrasing.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> state a short <strong>motif</strong> — 2 to 4 notes — and <em>develop</em> it across a solo (repeat it, sequence it to the next chord, change its rhythm, move where it starts) instead of running scales.</p>
+  <p><strong>Why this is what makes the pros sound like <em>singing</em>:</strong> every memorable Peter White or Chuck Loeb line is a small idea that keeps coming back, transformed. Scales fill time; motifs tell a story a listener can follow and hum. You now have all the raw material (targets, guide-tone lines, approaches) — this week is about <em>shaping</em> it into something with a through-line, not more notes.</p>
+
+  <h2>The concept — one idea, many angles</h2>
+  <p>A motif is just a tiny melodic-rhythmic cell. Development is doing recognizable things to it:</p>
+  <table>
+    <thead><tr><th>Move</th><th>What you do</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Repeat</strong></td><td>Play the exact motif again</td><td>Plants it in the ear</td></tr>
+      <tr><td><strong>Sequence</strong></td><td>Play it starting on the next chord's tones</td><td>Keeps the idea, follows the harmony</td></tr>
+      <tr><td><strong>Rhythmic variation</strong></td><td>Same notes, new rhythm</td><td>Fresh but familiar</td></tr>
+      <tr><td><strong>Displacement</strong></td><td>Start it on a different beat</td><td>Momentum and surprise</td></tr>
+      <tr><td><strong>Space</strong></td><td>Leave a rest, then answer it</td><td>Call-and-response with yourself</td></tr>
+    </tbody>
+  </table>
+  <p>The discipline this week is <strong>subtraction</strong>: fewer notes, more <em>meaning</em> per note. If a listener can hum your line back, you've won — that's the real test, not how many notes you played.</p>
+  <blockquote><p><strong>Honest note on Fretsy:</strong> this is the week Fretsy helps <em>least</em>, and that's fine — motif development is a phrasing-and-ear skill, not a fretboard-recall one. Use a simple external vamp (one or two chords) so the harmony stays out of your way and you can focus entirely on the idea. Fretsy's role shrinks to a short warm-up; your <strong>recorder</strong> is the real tool this week.</p></blockquote>
+
+  <h2>The week at a glance</h2>
+  <p>Keep the backing dead simple (a one- or two-chord vamp) so nothing competes with the idea.</p>
+  <table>
+    <thead><tr><th>Day</th><th>Development move</th><th>Task over the vamp</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Just <strong>state</strong> one 3-note motif</td><td>Play it, rest, play it again — all bar</td></tr>
+      <tr><td>2</td><td><strong>Repeat</strong> with small rhythm changes</td><td>Same notes, three different rhythms</td></tr>
+      <tr><td>3</td><td><strong>Sequence</strong> it up/down a step</td><td>Move the motif, keep its shape</td></tr>
+      <tr><td>4</td><td><strong>Displacement</strong></td><td>Start the motif on beat 2, then beat 4</td></tr>
+      <tr><td>5</td><td><strong>Space / call-and-response</strong></td><td>Motif, rest, answer the motif</td></tr>
+      <tr><td>6</td><td>Combine two moves</td><td>e.g. sequence + rhythmic variation</td></tr>
+      <tr><td>7</td><td>8-bar solo built from ONE motif</td><td>Record and judge the through-line</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Warm-up · Fretboard flash — 5 min · Drills tab</h3>
+    <ul>
+      <li>A light <strong>Scale Degree</strong> or <strong>Name the Note</strong> round to stay warm — no need to push it this week.</li>
+      <li>Spoken: sing a 3-note motif <em>before</em> you play it. If you can't sing it, you can't develop it.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Reflex drill — 8 min · Practice tab <span style="font-weight:400;color:var(--muted)">(keep the vocabulary oiled)</span></h3>
+    <ul>
+      <li>Quick pass through the 7th arpeggios in a couple of keys so your hands stay fluent — this is maintenance, not the focus.</li>
+      <li>Then find <strong>one motif</strong> on the neck and learn it in <strong>two positions</strong>, so you can develop it wherever your hand is.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Apply — 15 min · external vamp <span style="font-weight:400;color:var(--muted)">(the heart of the week)</span></h3>
+    <ul>
+      <li>Over a simple vamp, do the day's development move — and <em>only</em> that move. Constraint breeds creativity.</li>
+      <li>Play <strong>less than feels comfortable</strong>: state the idea, leave space, bring it back changed.</li>
+      <li><strong>Record 60 seconds</strong> (longer than other weeks — you need room to develop). Listen back and ask the only question that matters: <em>could someone hum the through-line?</em></li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Ear + steal — 5–10 min</h3>
+    <ul>
+      <li><strong>Steal a motif:</strong> grab a 2–4 note idea from a Peter White or Euge Groove hook and find it by ear. Then <em>develop</em> it yourself — sequence it, re-rhythm it.</li>
+      <li>Notice how <em>little</em> the pros play, and how much they repeat. That restraint is the lesson.</li>
+    </ul>
+  </div>
+
+  <h2>Tempo ladder (block ③)</h2>
+  <pre><code>Tempo:   whatever lets the idea breathe (often SLOWER, 60–75 BPM)
+Rule:    fewer notes each day, not more
+Test:    if you can't sing it back, simplify until you can
+Law:     a developed small idea beats a forgotten big one</code></pre>
+  <p><em>(Note: this week the "ladder" is toward <strong>less</strong>, not faster. Speed is not the variable.)</em></p>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"I run out of ideas after two bars."</strong> You're inventing new motifs instead of <em>developing</em> one. Force yourself to reuse the same cell for a full 8 bars — that's the exercise.</li>
+    <li><strong>"It sounds repetitive/boring."</strong> Add a development move: change the rhythm or displace the start. Repetition + variation = interest; repetition alone = a loop.</li>
+    <li><strong>"I keep drifting back into scale runs."</strong> Cut your note count in half. Scales are the default your hands fall into; motifs require choosing.</li>
+    <li><strong>"My motif doesn't fit the next chord."</strong> Sequence it to the new chord's tones rather than transposing literally — keep the <em>shape</em>, move the <em>notes</em>.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <p>You've completed Phase 2 when you can:</p>
+  <ul class="check">
+    <li>State a short motif and <strong>develop</strong> it (repeat, sequence, re-rhythm, displace) over a vamp.</li>
+    <li>Improvise an <strong>8-bar chorus from ONE motif</strong> with an audible through-line.</li>
+    <li>Use <strong>space</strong> — rests and call-and-response — as part of the phrasing.</li>
+    <li>Play a recording back and hear a <em>story</em>, not a scale exercise.</li>
+  </ul>
+  <p>If you can hum your own solo back, Phase 2 is done — you're no longer decorating changes, you're speaking over them.</p>
+
+  <h2>Next → Phase 3: Freedom &amp; your voice (Weeks 9–12)</h2>
+  <p>The mechanics are in place: you can target, connect, approach, and shape ideas. Phase 3 makes it <em>yours</em> — building a personal lick vocabulary in all keys (Week 9), closing the ear-to-hands gap with call-and-response and singing (Week 10), mastering space and tone (Week 11), and finally improvising a full, unscripted chorus over a real tune (Week 12). The reflexes are built; now we set them free.</p>
+
+  <p class="print-hint">The Recall Gap · Week 8 — Motif Development</p>
+</article>
+</body>
+</html>

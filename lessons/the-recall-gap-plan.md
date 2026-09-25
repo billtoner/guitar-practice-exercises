@@ -114,5 +114,22 @@ Recall is invisible day to day, so measure it. If a checkpoint isn't there yet, 
 
 This roadmap is the *long-term* view. Each week has its own detailed, self-contained lesson (drills, exact Fretsy settings, tempos, and a checkpoint):
 
-- **Week 1 — Seventh-Chord Arpeggios (m7 · dom7 · maj7)** → [week-01-seventh-arpeggios.md](week-01-seventh-arpeggios.md) · [open the HTML](week-01-seventh-arpeggios.html)
-- *Weeks 2–12 — added as you reach them.*
+**Phase 1 · Foundations of automaticity**
+1. [Seventh-Chord Arpeggios (m7 · dom7 · maj7)](week-01-seventh-arpeggios.md)
+2. [Guide Tones (3rds & 7ths)](week-02-guide-tones.md)
+3. [Arpeggios Across the Neck](week-03-arpeggios-across-neck.md)
+4. [Dorian & Mixolydian Around the Arpeggio](week-04-modes-around-arpeggio.md)
+
+**Phase 2 · Connecting & phrasing**
+5. [Chord-Tone Targeting](week-05-chord-tone-targeting.md)
+6. [Guide-Tone Lines Through Changes](week-06-guide-tone-lines.md)
+7. [Chromatic Approach Notes](week-07-chromatic-approach.md)
+8. [Motif Development](week-08-motif-development.md)
+
+**Phase 3 · Freedom & your voice**
+9. [Vocabulary in All Keys](week-09-vocabulary-all-keys.md)
+10. [Call & Response / Singing](week-10-call-and-response.md)
+11. [Space, Tone & Dynamics](week-11-space-tone-dynamics.md)
+12. [Solo Over a Real Song, Unscripted](week-12-solo-unscripted.md)
+
+*(Each lesson also has an `.html` twin of the same name — open that for the styled, Chrome-friendly version.)*

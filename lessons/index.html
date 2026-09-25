@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Recall Gap — Lessons</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.6; font-size: 18px;
+  }
+  .page { max-width: 780px; margin: 0 auto; padding: 52px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 .6em;
+  }
+  h1 { font-size: clamp(30px, 6vw, 46px); letter-spacing: -.02em; margin: 0 0 .2em; font-weight: 600; }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.14em; margin: 0 0 1.3em; }
+  h2 {
+    font-size: clamp(19px, 3vw, 23px); font-weight: 600; margin: 2em 0 .2em;
+    padding-top: .7em; border-top: 1px solid var(--border); color: var(--indigo);
+  }
+  p { margin: 0 0 1em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .roadmap-link {
+    display: inline-block; font-family: system-ui, sans-serif; font-size: .92em; font-weight: 600;
+    background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 0 10px 10px 0; padding: 12px 18px; margin: .4em 0 1.4em; color: var(--ink);
+  }
+  .roadmap-link:hover { text-decoration: none; border-color: var(--accent); }
+  .roadmap-link span { color: var(--muted); font-weight: 400; }
+
+  ol.weeks { list-style: none; margin: .4em 0 0; padding: 0; counter-reset: wk; }
+  ol.weeks.p2 { counter-reset: wk 4; }
+  ol.weeks.p3 { counter-reset: wk 8; }
+  ol.weeks li {
+    counter-increment: wk; display: grid; grid-template-columns: 34px 1fr; gap: 14px;
+    align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--border);
+  }
+  ol.weeks li::before {
+    content: counter(wk); font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .85em; color: var(--accent); font-weight: 600; text-align: right;
+  }
+  ol.weeks a { font-weight: 600; font-size: 1.02em; }
+  ol.weeks .desc { display: block; font-size: .82em; color: var(--muted); font-family: system-ui, sans-serif; margin-top: 2px; }
+
+  .foot {
+    font-family: system-ui, sans-serif; font-size: .82em; color: var(--muted);
+    margin-top: 2.6em; padding-top: 1.2em; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">Smooth-jazz improvisation · lessons</p>
+  <h1>The Recall Gap</h1>
+  <p class="subtitle">Turning theory you already know into recall your hands can reach.</p>
+
+  <p>A 12-week plan to build the one missing layer: fast, reflexive recall of chord tones so you can improvise, not just copy. Start with the roadmap for the big picture, then work one weekly lesson at a time.</p>
+
+  <a class="roadmap-link" href="the-recall-gap-plan.html">📋 The full roadmap &amp; method <span>— diagnosis, three pillars, phases, milestones</span></a>
+
+  <h2>Phase 1 · Foundations of automaticity</h2>
+  <ol class="weeks">
+    <li><a href="week-01-seventh-arpeggios.html">Seventh-Chord Arpeggios</a><span class="desc">m7 · dom7 · maj7 from the 6th &amp; 5th strings — named → played in under a second.</span></li>
+    <li><a href="week-02-guide-tones.html">Guide Tones (3rds &amp; 7ths)</a><span class="desc">Isolate the two notes that define each chord's sound.</span></li>
+    <li><a href="week-03-arpeggios-across-neck.html">Arpeggios Across the Neck</a><span class="desc">Connect positions — any arpeggio, any key, the whole fretboard.</span></li>
+    <li><a href="week-04-modes-around-arpeggio.html">Dorian &amp; Mixolydian Around the Arpeggio</a><span class="desc">The scale as connective tissue around chord tones.</span></li>
+  </ol>
+
+  <h2>Phase 2 · Connecting &amp; phrasing</h2>
+  <ol class="weeks p2">
+    <li><a href="week-05-chord-tone-targeting.html">Chord-Tone Targeting</a><span class="desc">Land a chord tone on beat 1 of every chord.</span></li>
+    <li><a href="week-06-guide-tone-lines.html">Guide-Tone Lines Through Changes</a><span class="desc">Voice-lead 3rds &amp; 7ths chord to chord — the smooth-jazz glue.</span></li>
+    <li><a href="week-07-chromatic-approach.html">Chromatic Approach Notes</a><span class="desc">Approach targets from a fret away; enclosures — the bebop flavor.</span></li>
+    <li><a href="week-08-motif-development.html">Motif Development</a><span class="desc">State a short idea and develop it — melody over scales.</span></li>
+  </ol>
+
+  <h2>Phase 3 · Freedom &amp; your voice</h2>
+  <ol class="weeks p3">
+    <li><a href="week-09-vocabulary-all-keys.html">Vocabulary in All Keys</a><span class="desc">Own 5 licks in all 12 keys and two positions.</span></li>
+    <li><a href="week-10-call-and-response.html">Call &amp; Response / Singing</a><span class="desc">Sing it, then find it — close the ear-to-hands gap.</span></li>
+    <li><a href="week-11-space-tone-dynamics.html">Space, Tone &amp; Dynamics</a><span class="desc">Half the notes — rests, bends, vibrato, touch.</span></li>
+    <li><a href="week-12-solo-unscripted.html">Solo Over a Real Song, Unscripted</a><span class="desc">Improvise a full chorus over a tune you know — the proof.</span></li>
+  </ol>
+
+  <p class="foot">Each lesson also exists as an editable <code>.md</code> file of the same name. Bookmark this page to jump into any week.</p>
+</article>
+</body>
+</html>

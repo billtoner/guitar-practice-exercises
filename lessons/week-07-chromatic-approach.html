@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 7 — Chromatic Approach Notes</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 2 · Week 7</p>
+  <h1>Chromatic Approach Notes</h1>
+  <p class="subtitle">Approach targets from above and below — the bebop flavor in Benson &amp; Loeb.</p>
+  <blockquote><p><strong>Phase 2 · Connecting &amp; phrasing.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> approach your target chord tones from a fret <strong>above or below</strong> — landing the target <strong>on the beat</strong>, the approach note <strong>just before it</strong>. Then learn the <strong>enclosure</strong>: surround a target from both sides.</p>
+  <p><strong>Why this is the "hip" ingredient:</strong> a correct note played bare sounds like an exercise; the same note <em>approached</em> sounds like Benson. Chromatic approaches are the bebop DNA running through George Benson and Chuck Loeb — a tiny lead-in that makes the target feel chosen and inevitable. You already know <em>where</em> the targets are (Weeks 5–6); this week is purely about the half-step run-up.</p>
+
+  <h2>The concept — off-beat approach, on-beat target</h2>
+  <p>The rule that makes it swing instead of stumble: <strong>the target lands ON the beat, the approach note lands OFF it</strong> (the "&amp;" just before). Your ear forgives almost any approach note as long as it resolves to a chord tone on the beat.</p>
+  <p>Three flavors, easiest to spiciest:</p>
+  <pre><code>Target = the 3rd of Cmaj7 (E), landing on beat 1
+
+Below (chromatic):   D#  →  E       (a fret below, off-beat → on-beat)
+Above (chromatic):   F   →  E       (a fret above)
+Enclosure (both):    F  D#  →  E     (above, below, then target)</code></pre>
+  <p>The enclosure (from above, then below, then the target) is the signature move — it "brackets" the note so the arrival feels earned. Keep approaches to <strong>one or two notes</strong>; this is seasoning, not a scale run.</p>
+  <blockquote><p><strong>Honest note on Fretsy:</strong> the targets live in a moving progression, so <strong>Apply</strong> stays on an external vamp/ii–V–I backing track. But Fretsy's <strong>metronome + arpeggio content</strong> is ideal for the mechanical drill: it keeps your targets honest (real chord tones) and the click keeps the on-beat/off-beat placement strict. When Changes Mode ships, this whole drill moves in-app.</p></blockquote>
+
+  <h2>The week at a glance</h2>
+  <table>
+    <thead><tr><th>Day</th><th>Approach type</th><th>Context</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Below only (chromatic, a fret under)</td><td>one target, metronome</td></tr>
+      <tr><td>2</td><td>Above only (a fret over)</td><td>one target, metronome</td></tr>
+      <tr><td>3</td><td>Below, then above — pick by feel</td><td>m7 vamp backing</td></tr>
+      <tr><td>4</td><td><strong>Enclosure</strong> (above + below + target)</td><td>m7 vamp</td></tr>
+      <tr><td>5</td><td>Approaches into guide tones of a ii–V</td><td>ii–V–I backing</td></tr>
+      <tr><td>6</td><td>Enclosures into guide tones of a ii–V</td><td>ii–V–I backing</td></tr>
+      <tr><td>7</td><td>Free: approach any target, any flavor</td><td>ii–V–I, two keys</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Warm-up · Fretboard flash — 5 min · Drills tab</h3>
+    <ul>
+      <li><strong>Spot the Wrong Note</strong> or <strong>Scale Degree</strong> to keep chord-tone vs non-chord-tone vision sharp — you need to <em>know</em> which note is the target and which is the approach.</li>
+      <li>Spoken: pick a target (e.g. "3rd of G7 = B"), name the fret above and below it.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Reflex drill — 10 min · Practice tab + metronome <span style="font-weight:400;color:var(--muted)">(the mechanical move)</span></h3>
+    <ul>
+      <li>Filter to 7th arpeggios, <strong>Lock Key</strong>, Display <strong>Degrees</strong>, metronome <strong>on</strong>.</li>
+      <li>Pick one chord tone as the target. Play <strong>approach-note (on the "&amp;") → target (on the beat)</strong>, over and over, so the placement is automatic. Do it below, then above, then as an enclosure.</li>
+      <li>The click is the referee: target must land exactly on the beat every time.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Apply — 10–15 min · external backing track <span style="font-weight:400;color:var(--muted)">(make it music)</span></h3>
+    <ul>
+      <li>Over the day's vamp/ii–V–I, target chord tones on the downbeats (Week 5) and <strong>precede each with an approach</strong> (or an enclosure from Day 4 on).</li>
+      <li>Don't approach <em>everything</em> — one good approached target per bar beats a nonstop chromatic scramble. <strong>Record 30 s;</strong> check that targets still land on the beat.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Ear + steal — 5–10 min</h3>
+    <ul>
+      <li><strong>Interval by Ear</strong> (Drills): drill the <strong>half-step</strong>, the whole engine of chromatic approaches.</li>
+      <li><strong>Steal:</strong> find one enclosure in a Benson line (he does them constantly). Learn those 3 notes and move them to two other keys.</li>
+    </ul>
+  </div>
+
+  <h2>Tempo ladder (blocks ② and ③)</h2>
+  <pre><code>Start:   60 BPM · single approach → target, on the beat
+Step 2:  70 BPM · enclosure (2 approach notes) → target
+Step 3:  80 BPM · approaches inside a ii–V, sparingly
+Law:     target ON the beat, approach OFF it — always</code></pre>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"It sounds sloppy / random."</strong> Your target isn't landing on the beat — the approach is stealing the downbeat. Slow down and let the click prove the target is on 1.</li>
+    <li><strong>"I'm playing chromatic runs, not approaches."</strong> Cap it at one or two approach notes. If you can't hum where you're going, you've turned seasoning into soup.</li>
+    <li><strong>"The enclosure trips me up."</strong> Practice it <em>out of time</em> first — above, below, target — then add the click. Order matters more than speed.</li>
+    <li><strong>"It sounds outside/wrong."</strong> An approach note is fine only because it <em>resolves</em>. If it doesn't reach a chord tone on the beat, it just sounds like a mistake. Fix the landing, not the approach.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <p>You're ready for Week 8 when you can:</p>
+  <ul class="check">
+    <li>Approach a target chord tone from <strong>above and from below</strong>, landing the target cleanly <strong>on the beat</strong>.</li>
+    <li>Play an <strong>enclosure</strong> (above + below + target) in time at a moderate tempo.</li>
+    <li>Use approaches <strong>into guide tones</strong> through a ii–V without losing the beat.</li>
+    <li>Do it <em>sparingly</em> — as seasoning, not a constant chromatic run.</li>
+  </ul>
+
+  <h2>Next → Week 8: Motif development</h2>
+  <p>You now have correct, connected, hip-sounding lines. The last Phase 2 step is the one that separates soloists from scale-players: taking a short <strong>motif</strong> — two, three, four notes — and <em>developing</em> it (repeating, sequencing, displacing) so a listener can actually follow and hum your solo. Melody over machinery.</p>
+
+  <p class="print-hint">The Recall Gap · Week 7 — Chromatic Approach Notes</p>
+</article>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Recall Gap — 12-Week Improv Plan</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 56px 22px 96px; }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(30px, 6vw, 44px); letter-spacing: -.02em; margin: 0 0 .2em; }
+  h2 {
+    font-size: clamp(23px, 4vw, 30px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 20px; margin: 1.6em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.15em; margin: 0 0 1.4em; }
+  .meta { color: var(--muted); font-size: .95em; margin: 0 0 2em; }
+  .meta strong { color: var(--ink); }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2.4em 0; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-style: italic; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .92em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .9em; line-height: 1.5;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .35em 0; }
+  li::marker { color: var(--accent); }
+
+  .callout {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 4px 20px; margin: 1.6em 0;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <h1>The Recall Gap</h1>
+  <p class="subtitle">Turning theory you already know into recall your hands can reach.</p>
+  <p class="meta">
+    A 12-week smooth-jazz improvisation plan.<br>
+    <strong>For:</strong> a player with ~60 years in the hands, refined taste, and one missing layer.<br>
+    <strong>Role models:</strong> George Benson, Peter White, Norman Brown, Chuck Loeb, Euge Groove, Paul Brown.<br>
+    <strong>Time:</strong> 30–45 min/day.
+  </p>
+
+  <h2>The diagnosis</h2>
+  <p>Two sentences explain everything:</p>
+  <blockquote><p>"I learn the solo in isolation… I know the theory, I'm just slow getting there. My recall isn't fast enough."</p></blockquote>
+  <p>This is <strong>not</strong> a knowledge problem or a technique problem. It's an <strong>automaticity problem</strong> — the same reason a fluent reader doesn't sound out letters. You <em>know</em> what a Gmaj7 arpeggio is; you just can't find it under your fingers in the quarter-second the music gives you. Improvisation lives or dies on that quarter-second, and automaticity is the most trainable thing in music.</p>
+  <table>
+    <thead><tr><th>You already have</th><th>You still need</th></tr></thead>
+    <tbody>
+      <tr><td>Strong, experienced hands and clean technique</td><td>Reflexive recall — chord tones found without thinking</td></tr>
+      <tr><td>Solid theory, held as <em>knowledge</em></td><td>That theory drilled into <em>reflex</em> under time pressure</td></tr>
+      <tr><td>The ability to learn and play any solo you love</td><td>Those solos connected to the harmony underneath</td></tr>
+      <tr><td>Refined melodic taste and great models</td><td>A personal lick vocabulary you own in all 12 keys</td></tr>
+    </tbody>
+  </table>
+  <p><strong>The strategy in one sentence:</strong> stop practicing solos as isolated melodies; start practicing them as chord tones you can grab instantly — and drill recall the way an athlete drills reflexes, not the way a student memorizes facts.</p>
+
+  <h2>The method — three pillars, every week</h2>
+  <ol>
+    <li><strong>Connect solo → harmony.</strong> Take solos you already know and label each note against the chord under it (root, 3rd, 7th, passing tone?). The line stops being random and becomes a set of choices you could have made yourself.</li>
+    <li><strong>Drill recall to reflex.</strong> Short, constrained, timed reps: one arpeggio, one guide-tone pair, one position — named, then found instantly. Speed comes from <em>removing</em> decisions, not adding scales. This pillar fixes the bottleneck.</li>
+    <li><strong>Improvise daily, low stakes.</strong> End every session over a backing track with one tight constraint ("chord tones only, on the beat"). Freedom is a muscle; it grows only under conditions easy enough to succeed.</li>
+  </ol>
+
+  <h2>The daily template (30–45 min)</h2>
+  <p>Same four blocks every day — only the <em>content</em> changes with the week. Keep a metronome and one backing track ready before you start.</p>
+  <table>
+    <thead><tr><th>Time</th><th>Block</th><th>What you do</th></tr></thead>
+    <tbody>
+      <tr><td><strong>5 min</strong></td><td><strong>Warm-up · Fretboard flash</strong></td><td>Name a random note, find it on every string in under a second. Or say a chord aloud ("Bbmaj7"), spell it, land on the root. Pure recall, no music yet.</td></tr>
+      <tr><td><strong>10 min</strong></td><td><strong>Reflex drill</strong></td><td>This week's automaticity target, with a metronome, slow enough to play <em>perfectly</em>. Nudge tempo up only when it's clean.</td></tr>
+      <tr><td><strong>10–15 min</strong></td><td><strong>Apply</strong></td><td>Over a backing track, solo using <em>only</em> today's tool. One rule at a time. Boring means it's working. Record 30 seconds.</td></tr>
+      <tr><td><strong>5–10 min</strong></td><td><strong>Ear + steal</strong></td><td>Pull a 2–4 note phrase off a Benson / White / Loeb recording <em>by ear</em>, then find which chord tones it hits. Bank it — you'll transpose it later.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The 12-week arc</h2>
+  <p>Roughly a quarter each. A phase is done when the reflex is automatic, not when the calendar says so.</p>
+
+  <h3>Phase 1 · Foundations of automaticity (Weeks 1–4)</h3>
+  <p><em>Goal: find the tones of any m7, dom7, and maj7 chord anywhere on the neck, instantly.</em></p>
+  <ul>
+    <li><strong>Week 1 — Seventh-chord arpeggios, 2 shapes each.</strong> m7 · dom7 · maj7 from the 6th- and 5th-string roots. Named → played in under a second. One key at a time.</li>
+    <li><strong>Week 2 — Guide tones: 3rds &amp; 7ths.</strong> Just the two notes that define each chord's sound. Find both instantly for any chord you name.</li>
+    <li><strong>Week 3 — Arpeggios across the neck.</strong> Connect the two shapes into one long arpeggio spanning the fretboard, all 12 keys.</li>
+    <li><strong>Week 4 — Dorian &amp; Mixolydian around the arpeggio.</strong> Add the scale <em>as decoration around chord tones</em> — arpeggio is the skeleton, scale is the connective tissue.</li>
+  </ul>
+
+  <h3>Phase 2 · Connecting &amp; phrasing (Weeks 5–8)</h3>
+  <p><em>Goal: target the right note on the right beat as chords change, and start sounding like music.</em></p>
+  <ul>
+    <li><strong>Week 5 — Chord-tone targeting.</strong> Land a chord tone on beat 1 of every chord. Nothing else matters yet. The highest-value improv drill there is.</li>
+    <li><strong>Week 6 — Guide-tone lines through changes.</strong> Voice-lead 3rds &amp; 7ths chord to chord — nearest note wins. The smooth-jazz "glue."</li>
+    <li><strong>Week 7 — Chromatic approach notes.</strong> Approach any target chord tone from a fret above or below. The bebop flavor in Benson &amp; Loeb lines.</li>
+    <li><strong>Week 8 — Motif development.</strong> State a 3-note idea, then repeat and vary it. Melody, not scales — what makes Peter White sound like <em>singing</em>.</li>
+  </ul>
+
+  <h3>Phase 3 · Freedom &amp; your voice (Weeks 9–12)</h3>
+  <p><em>Goal: improvise a musical, intentional solo over songs you know — and sound like you.</em></p>
+  <ul>
+    <li><strong>Week 9 — Vocabulary in all keys.</strong> Take 5 banked licks and transpose each to all 12 keys and 2 positions. Now you <em>own</em> them.</li>
+    <li><strong>Week 10 — Call &amp; response / singing.</strong> Sing a phrase, then find it. Trade 4 bars with the recording. Closes the ear-to-hands gap.</li>
+    <li><strong>Week 11 — Space, tone &amp; dynamics.</strong> Improvise using half the notes. Rests, bends, vibrato, thumb tone. 80% of why the pros sound "smooth."</li>
+    <li><strong>Week 12 — Solo over a real song, unscripted.</strong> Improvise a full chorus cold, and record it. Compare to Week 1's clip — that's the proof.</li>
+  </ul>
+
+  <h2>The smooth-jazz toolkit</h2>
+
+  <h3>Over a minor-7 vamp <span style="font-weight:400;color:var(--muted)">(a groove on one m7 chord)</span></h3>
+  <ul>
+    <li>Scale: <strong>Dorian</strong> (a minor scale with a bright 6th); spice with minor pentatonic + the blues note.</li>
+    <li>Aim for the <strong>3rd &amp; 7th</strong> — they carry the mood.</li>
+  </ul>
+  <pre><code>Cm7 → chord tones C  Eb  G  Bb  ·  guide tones = Eb (3) &amp; Bb (♭7)</code></pre>
+
+  <h3>Over a ii–V–I <span style="font-weight:400;color:var(--muted)">(the engine of jazz motion)</span></h3>
+  <ul>
+    <li>Voice-lead 3rds &amp; 7ths by the nearest note; tension on the V, release on the I.</li>
+  </ul>
+  <pre><code>Dm7 → G7 → Cmaj7      7th/3rd line:  C→B→B   and   F→F→E</code></pre>
+
+  <h3>The "singing" ingredients</h3>
+  <ul>
+    <li><strong>Space</strong> — a rest is a note. <strong>Bends &amp; slides</strong> into chord tones, not scale runs. <strong>Motif</strong> — say one idea, then answer it. <strong>Tone</strong> — thumb/fingers, soft attack, warm neck pickup.</li>
+  </ul>
+
+  <h3>Study your models on purpose</h3>
+  <p>Listen like an analyst — <em>what</em> are they hitting and <em>when</em>? Benson · bebop lines &amp; pentatonics · Peter White · melodic nylon phrasing · Chuck Loeb · sophisticated, singable · Norman Brown · Benson-rooted groove · Euge Groove · hooky motifs · Paul Brown · tasteful space.</p>
+
+  <h2>Milestones — how you'll know it's working</h2>
+  <p>Recall is invisible day to day, so measure it. If a checkpoint isn't there yet, stay in that phase.</p>
+  <ul>
+    <li><strong>End Week 4</strong> — Name any m7/dom7/maj7 chord and land its 3rd and 7th <strong>in under a second</strong>, in at least two spots on the neck.</li>
+    <li><strong>End Week 8</strong> — Over changes, hit a <strong>chord tone on beat 1</strong> of most chords without stopping or thinking your way there.</li>
+    <li><strong>End Week 12</strong> — Improvise a <strong>full chorus over a tune you know</strong> — no memorized solo — and it sounds like music you meant to play.</li>
+    <li><strong>Ongoing</strong> — This week's 30-second clip sounds more intentional than last month's. That trend line <em>is</em> the progress.</li>
+  </ul>
+  <blockquote><p>The freedom you're after isn't on the far side of more knowledge — it's on the far side of making the knowledge automatic.</p></blockquote>
+
+  <h2>Weekly lesson plans</h2>
+  <p>This roadmap is the <em>long-term</em> view. Each week has its own detailed, self-contained lesson (drills, exact Fretsy settings, tempos, and a checkpoint):</p>
+  <ul>
+    <li><strong>Week 1 — Seventh-Chord Arpeggios (m7 · dom7 · maj7)</strong> → <a href="week-01-seventh-arpeggios.html">open the lesson</a></li>
+    <li><em>Weeks 2–12 — added as you reach them.</em></li>
+  </ul>
+
+  <p class="print-hint">The Recall Gap · 12-week smooth-jazz improvisation plan</p>
+</article>
+</body>
+</html>

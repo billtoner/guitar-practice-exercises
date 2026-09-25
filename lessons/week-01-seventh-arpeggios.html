@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 1 — Seventh-Chord Arpeggios</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .check {
+    list-style: none; padding-left: 0; font-family: system-ui, sans-serif; font-size: .95em;
+  }
+  .check li { padding-left: 30px; position: relative; margin: .55em 0; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px;
+    border: 2px solid var(--good); border-radius: 5px;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 1 · Week 1</p>
+  <h1>Seventh-Chord Arpeggios</h1>
+  <p class="subtitle">m7 · dom7 · maj7 — from the 6th- and 5th-string roots.</p>
+  <blockquote><p><strong>Phase 1 · Foundations of automaticity.</strong> Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>This week's one goal:</strong> find the tones of any <strong>m7, dom7, or maj7</strong> chord from its <strong>6th- and 5th-string roots</strong>, <em>named → played in under a second.</em> No speed, no solos yet — just converting three shapes from "I know that" into "my hand already went there."</p>
+  <p><strong>Why this first:</strong> every chord in smooth jazz is a flavor of these three. If you can't grab their tones instantly, nothing downstream (targeting, guide-tone lines, improv) can happen in real time. This is the taproot.</p>
+
+  <h2>The three shapes (a 30-second refresher)</h2>
+  <p>Spelled from the root, the only difference between them is the <strong>3rd and the 7th</strong> — the two "guide tones" that define a chord's sound. Burn this in; it's the whole of Week 2:</p>
+  <table>
+    <thead><tr><th>Chord</th><th>Formula</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td><strong>m7</strong> (minor 7)</td><td>1 · ♭3 · 5 · ♭7</td><td>flat</td><td>flat</td></tr>
+      <tr><td><strong>dom7</strong> (7)</td><td>1 · 3 · 5 · ♭7</td><td>natural</td><td>flat</td></tr>
+      <tr><td><strong>maj7</strong></td><td>1 · 3 · 5 · 7</td><td>natural</td><td>natural</td></tr>
+    </tbody>
+  </table>
+  <p>Read down the 3rd/7th columns: <strong>m7 → dom7</strong> raises the 3rd; <strong>dom7 → maj7</strong> raises the 7th. Two notes move; the root and 5th never do. That is the entire difference between "minor," "dominant," and "major seventh." Say it out loud until it's boring.</p>
+  <p><strong>The two shapes each week:</strong> one arpeggio with its <strong>root on the 6th (low E) string</strong>, one with its <strong>root on the 5th (A) string</strong>. Let Fretsy's neck diagram (Degrees display) show you the shape — you're training the <em>visual + physical</em> pattern, so watch the R–3–5–7 light up rather than reading fret numbers off a page.</p>
+
+  <h2>One-time Fretsy setup (do this once, leave it)</h2>
+  <table>
+    <thead><tr><th>Setting</th><th>Value</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Difficulty tier</td><td><strong>Advanced</strong></td><td>Unlocks Descending/Both direction; the 7th arpeggios are available from Intermediate up</td></tr>
+      <tr><td>Practice content filter</td><td>Enable <strong>only</strong> Major-7th, Dominant-7th, Minor-7th arpeggios</td><td>Forces the randomizer to draw only this week's three shapes</td></tr>
+      <tr><td>Root-string selection</td><td><strong>6th (E) and 5th (A) only</strong></td><td>This week's two root strings</td></tr>
+      <tr><td>Accidental spelling</td><td><strong>Flats</strong></td><td>Smooth jazz lives in flat keys (B♭, E♭, A♭)</td></tr>
+      <tr><td>Tone (Pro, optional)</td><td>Warm, neck-pickup-ish</td><td>Match the ear you're chasing (Benson/White warmth)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The week at a glance</h2>
+  <p>Same four daily blocks every day; only the <strong>key</strong> changes. Cycle one key per day, and let the <strong>direction</strong> grow across the week.</p>
+  <table>
+    <thead><tr><th>Day</th><th>Key</th><th>Direction</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>C</td><td>Ascending</td></tr>
+      <tr><td>2</td><td>F</td><td>Ascending</td></tr>
+      <tr><td>3</td><td>B♭</td><td>Ascending + Descending</td></tr>
+      <tr><td>4</td><td>E♭</td><td>Ascending + Descending</td></tr>
+      <tr><td>5</td><td>A♭</td><td>Ascending + Descending</td></tr>
+      <tr><td>6</td><td>G</td><td>Both</td></tr>
+      <tr><td>7</td><td>D</td><td>Both</td></tr>
+    </tbody>
+  </table>
+  <p><em>(Missed a day? Don't restart the clock — just pick up at the next key. Consistency beats completeness.)</em></p>
+
+  <h2>The daily session (30–45 min)</h2>
+
+  <div class="block-card">
+    <h3>① Warm-up · Fretboard flash — 5 min · Drills tab</h3>
+    <ul>
+      <li><strong>Name the Note</strong>, then <strong>Find the Note</strong>.</li>
+      <li>Timer: <strong>Beat the Clock</strong> — start at <strong>10 s</strong>, tighten toward <strong>5 s</strong> by Day 7.</li>
+      <li>Spoken micro-drill: say a random 7th chord aloud ("E♭maj7"), spell <strong>R–3–5–7</strong> <em>before</em> you look. Trains the naming half of "named → played."</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>② Reflex drill — 10 min · Practice tab <span style="font-weight:400;color:var(--muted)">(the core of the week)</span></h3>
+    <ul>
+      <li><strong>Lock Key</strong> to today's key (from the table).</li>
+      <li><strong>Lock Root string to the 6th</strong> for the first 5 min, then switch the lock to the <strong>5th</strong> for the next 5.</li>
+      <li>Pattern <strong>Straight</strong> · Display <strong>Degrees</strong> → <strong>Notes</strong> · Neck <strong>ON</strong> · Zoom <strong>single position</strong>.</li>
+      <li>Direction per the day's row above.</li>
+      <li><strong>Recall test:</strong> turn on <strong>Hands-free auto-advance</strong> with the countdown at <strong>~4 s</strong>, tightening to <strong>2 s</strong>. The win is being <strong>on the root before the count-in ends</strong>, then playing it clean.</li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>③ Apply — 10–15 min · Practice tab <span style="font-weight:400;color:var(--muted)">(make it musical + connect shapes)</span></h3>
+    <ul>
+      <li>Same content, but <strong>Loop ON</strong>, Pattern <strong>In 3rds</strong> → <strong>Groups of 4</strong>, Direction <strong>Both</strong>, Zoom <strong>whole neck</strong>.</li>
+      <li>Goal: stop playing isolated boxes — <strong>connect the 6th- and 5th-string shapes</strong> into one arpeggio that spans the neck.</li>
+      <li>Tempo <strong>70–90 BPM</strong>.</li>
+      <li><em>Improv seed (optional but valuable):</em> pull up an external m7 vamp backing track (YouTube / iReal Pro) in today's key and noodle using <strong>only</strong> the arpeggio tones. First real improv rep. <em>(This is exactly the in-app gap Fretsy's planned "Changes Mode" will fill.)</em></li>
+    </ul>
+  </div>
+
+  <div class="block-card">
+    <h3>④ Ear + steal — 5–10 min · Drills tab</h3>
+    <ul>
+      <li><strong>Chord Quality by Ear</strong>, limited to <strong>m7 / dom7 / maj7</strong> — learn to <em>hear</em> the three qualities (listen for whether the 3rd and 7th sound "flat" or "natural").</li>
+      <li>Then <strong>steal</strong>: play one short Benson or Peter White phrase and find which chord tone each note lands on.</li>
+    </ul>
+  </div>
+
+  <h2>Tempo ladder (blocks ② and ③)</h2>
+  <pre><code>Start:   60 BPM · quarter notes (one arpeggio note per beat)
+Rule:    clean 3× in a row → Speed Trainer +5 BPM
+Ceiling: ~100 BPM, then reset to 60 and switch to eighth notes
+Law:     perfect-slow always beats sloppy-fast</code></pre>
+  <p>Speed is the <em>reward</em> for accuracy, never the target. If a rep buzzes or fumbles, the tempo was too high — drop 10 BPM without guilt.</p>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"I can't find it in time."</strong> Good — that gap <em>is</em> the recall gap. Widen the auto-advance countdown, get 90% clean, then tighten. Don't grind at a countdown that guarantees failure.</li>
+    <li><strong>"I keep mixing up dom7 and maj7."</strong> They differ by <em>one note</em> — the 7th. Flip Display to <strong>Degrees</strong> and stare at where the 7 sits vs the ♭7. Normal confusion, and exactly what Week 2 resolves.</li>
+    <li><strong>"Buzzing / muddy notes."</strong> Tempo's too fast, or you're not letting each note ring separately. Slow down; play it clean and boring first.</li>
+    <li><strong>"My 5th-string shape feels alien."</strong> Spend an extra minute there. The 5th-string root is the one most players under-drill; it's half of why recall feels slow.</li>
+  </ul>
+
+  <h2>End-of-week checkpoint ✅</h2>
+  <p>You're ready for Week 2 when you can:</p>
+  <ul class="check">
+    <li>Name any <strong>m7 / dom7 / maj7</strong> in the 7 keys (C, F, B♭, E♭, A♭, G, D) and land its <strong>root</strong> on the 6th or 5th string in <strong>under ~1 second</strong>.</li>
+    <li>Immediately find its <strong>3rd and 7th</strong> from that root (the guide tones).</li>
+    <li>Play the full arpeggio <strong>ascending <em>and</em> descending</strong>, clean, at <strong>~90 BPM</strong>.</li>
+    <li>Hear the difference between the three qualities on the <strong>Chord Quality by Ear</strong> drill more often than not.</li>
+  </ul>
+  <p>Not all four yet? Stay here another few days — Phase 1 is done when the reflex is automatic, not when the calendar says so.</p>
+
+  <h2>Next → Week 2: Guide tones (3rds &amp; 7ths)</h2>
+  <p>Once the full arpeggios are reflexive, we <strong>strip them to just the 3rd and 7th</strong> — the two notes that carry the harmony — and learn to grab <em>those</em> instantly for any chord you name. That's the bridge from "playing shapes" to "outlining changes."</p>
+
+  <p class="print-hint">The Recall Gap · Week 1 — Seventh-Chord Arpeggios</p>
+</article>
+</body>
+</html>

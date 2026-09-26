@@ -116,7 +116,7 @@ This roadmap is the *long-term* view. Each week has its own detailed, self-conta
 
 **Phase 1 · Foundations of automaticity**
 1. [Seventh-Chord Arpeggios (m7 · dom7 · maj7)](week-01-seventh-arpeggios.md)
-2. [Guide Tones (3rds & 7ths)](week-02-guide-tones.md)
+2. [Guide Tones (3rds & 7ths)](week-02-guide-tones.md) — ↳ companion: [Guide-Tone Reference](week-02-companion-guide-tones-reference.md)
 3. [Arpeggios Across the Neck](week-03-arpeggios-across-neck.md)
 4. [Dorian & Mixolydian Around the Arpeggio](week-04-modes-around-arpeggio.md)
 

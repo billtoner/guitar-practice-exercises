@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 6 Companion — The Guide-Tone Formula</title>
+<style>
+  :root {
+    --bg: #f4f3f7; --surface: #ffffff; --ink: #191b2a; --muted: #565a70;
+    --accent: #a86a15; --accent-ink: #7a4e08; --indigo: #3b3f7a;
+    --border: #e3e1ec; --code-bg: #f0eef6; --quote-bg: #faf6ee; --good: #2f7d5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101019; --surface: #1a1b28; --ink: #ecebf3; --muted: #a2a4bd;
+      --accent: #e0a44a; --accent-ink: #f0c481; --indigo: #9fa2e6;
+      --border: #2b2c40; --code-bg: #20202f; --quote-bg: #211d16; --good: #5cc191;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.65; font-size: 18px;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .8em; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .6em;
+  }
+  h1, h2, h3 { line-height: 1.15; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5.5vw, 40px); letter-spacing: -.02em; margin: 0 0 .25em; }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px); margin: 2.2em 0 .5em; padding-top: .6em;
+    border-top: 1px solid var(--border); letter-spacing: -.01em;
+  }
+  h3 { font-size: 19px; margin: 1.5em 0 .35em; color: var(--indigo); }
+  p, li { color: var(--ink); }
+  .subtitle { color: var(--accent-ink); font-style: italic; font-size: 1.12em; margin: 0 0 1.4em; }
+  a { color: var(--accent); }
+  strong { font-weight: 700; }
+
+  blockquote {
+    margin: 1.4em 0; padding: .9em 1.2em; background: var(--quote-bg);
+    border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+    font-family: system-ui, sans-serif; font-size: .92em; color: var(--ink);
+  }
+  blockquote p { margin: .3em 0; }
+  blockquote a { color: var(--accent-ink); }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 1.3em 0; font-size: .9em;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em;
+    background: var(--code-bg); padding: 1px 5px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-size: .88em; line-height: 1.5;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; }
+
+  ul, ol { padding-left: 1.3em; }
+  li { margin: .4em 0; }
+  li::marker { color: var(--accent); }
+
+  .block-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 2px 20px; margin: 1.1em 0;
+  }
+  .print-hint {
+    font-family: system-ui, sans-serif; font-size: .8em; color: var(--muted);
+    text-align: center; margin-top: 3em; padding-top: 1.4em; border-top: 1px solid var(--border);
+  }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    h2 { page-break-after: avoid; } table, pre, blockquote, .block-card { page-break-inside: avoid; }
+    .print-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <p class="eyebrow">The Recall Gap · Phase 2 · Week 6 · Companion</p>
+  <h1>The Guide-Tone Formula</h1>
+  <p class="subtitle">Why the 3rd and 7th of one chord become the 7th and 3rd of the next — and why it's guaranteed.</p>
+  <blockquote><p><strong>Phase 2 · Connecting &amp; phrasing.</strong> A reference sheet for <a href="week-06-guide-tone-lines.html">Week 6 — Guide-Tone Lines</a>. Part of the <a href="the-recall-gap-plan.html">The Recall Gap</a> 12-week plan.</p></blockquote>
+
+  <p><strong>What this sheet answers:</strong> for every ii–V–I we practice, what do the <strong>3rd and 7th of one chord turn into in the NEXT chord</strong> — and <em>why</em> is that formula guaranteed to work? Once you see the mechanism, you stop memorizing lines and start <em>predicting</em> them.</p>
+
+  <h2>1. The guide tones (ii–V–I in C)</h2>
+  <table>
+    <thead><tr><th>Chord</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td>Dm7</td><td>F</td><td>C</td></tr>
+      <tr><td>G7</td><td>B</td><td>F</td></tr>
+      <tr><td>Cmaj7</td><td>E</td><td>B</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. The formula — what each note <em>becomes</em> in the next chord</h2>
+  <p>The roles <strong>swap</strong> at every chord change:</p>
+  <table>
+    <thead><tr><th>This chord's…</th><th>…turns into the next chord's…</th><th>What the note actually does</th></tr></thead>
+    <tbody>
+      <tr><td><strong>3rd</strong></td><td><strong>7th</strong></td><td><strong>stays put</strong> — same note, held (common tone)</td></tr>
+      <tr><td><strong>7th</strong></td><td><strong>3rd</strong></td><td><strong>falls a half-step</strong></td></tr>
+    </tbody>
+  </table>
+  <p>So at each change, <strong>one guide tone is glued in place and the other slides down a half-step.</strong> That's the whole trick.</p>
+
+  <h2>3. Trace it — two nearly-motionless melodies</h2>
+  <pre><code>        Dm7        G7        Cmaj7
+3rd →   F   ───→  (7th) F ──→ (3rd) E      F stays, then falls ½
+7th →   C   ───→  (3rd) B ──→ (7th) B      C falls ½, then stays</code></pre>
+  <ul>
+    <li><strong>F</strong>: 3rd of Dm7 → <em>same F</em> is the 7th of G7 → falls to <strong>E</strong>, the 3rd of Cmaj7.</li>
+    <li><strong>C</strong>: 7th of Dm7 → falls to <strong>B</strong>, the 3rd of G7 → <em>same B</em> is the 7th of Cmaj7.</li>
+  </ul>
+  <p>Two notes, almost no motion, and the whole progression is spelled out. That gliding, inevitable sound under Benson / Loeb / White lines is <em>this</em>.</p>
+
+  <h2>4. Why the formula is guaranteed</h2>
+  <p>Every progression in this plan is driven by <strong>roots moving down a fifth</strong> (D→G→C…), and our whole key cycle — C, F, B♭, E♭, A♭, D♭… — is that same cycle of fifths. That one fact <em>forces</em> the swap:</p>
+  <ul>
+    <li><strong>The 3rd of any chord is automatically the 7th slot of the chord a fifth below it.</strong> A 3rd sits ~4 semitones above its root; drop the root a fifth (7 semitones) and that same pitch is now ~11 semitones above the <em>new</em> root — i.e. a 7th. The note doesn't move; the chord moved underneath it.</li>
+    <li><strong>The 7th of any chord lands one step above the 3rd slot of the chord a fifth below</strong> — so it resolves <em>down</em> into it.</li>
+  </ul>
+  <div class="block-card">
+    <p>The punchline: <strong>when the root falls a fifth, the 3rd and 7th trade jobs, and each note only has to move 0 or 1 semitone to fit the new chord.</strong> Smoothness isn't luck you memorize — it's arithmetic. Your ear just hears "0 or 1 semitone" as <em>smooth</em>.</p>
+  </div>
+
+  <h2>5. The one wrinkle (so it generalizes to <em>any</em> progression)</h2>
+  <p>Whether a guide tone <em>stays</em> or <em>slides</em> depends on the two chords' qualities:</p>
+  <table>
+    <thead><tr><th>Progression type</th><th>3rd → 7th</th><th>7th → 3rd</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Diatonic ii–V–I</strong> (m7 → dom7 → maj7)</td><td>common tone (stays)</td><td>falls ½ step</td></tr>
+      <tr><td><strong>All-dominant cycle</strong> (C7 → F7 → B♭7…)</td><td>falls ½ step</td><td>falls ½ step</td></tr>
+    </tbody>
+  </table>
+  <p>In a pure dominant cycle <em>both</em> guide tones fall a half-step (the qualities no longer share a note), so you get a chromatic descent. Either way the rule holds: <strong>roots down a fifth → 3rd and 7th swap slots → each moves at most a half-step.</strong> The ii–V–I is just the smoothest special case, where half the notes don't move at all.</p>
+
+  <h2>6. The same formula in five keys</h2>
+  <p>Practice-ready. The <strong>common tone</strong> is glued; the <strong>other note falls a half-step</strong>.</p>
+
+  <h3>ii–V–I in C — Dm7 → G7 → Cmaj7</h3>
+  <table>
+    <thead><tr><th>Chord</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td>Dm7</td><td>F</td><td>C</td></tr>
+      <tr><td>G7</td><td>B</td><td>F</td></tr>
+      <tr><td>Cmaj7</td><td>E</td><td>B</td></tr>
+    </tbody>
+  </table>
+  <pre><code>Line A (3→7→3):  F  →  F  →  E     (glued F, then ½-step to E)
+Line B (7→3→7):  C  →  B  →  B     (½-step C→B, then glued B)</code></pre>
+
+  <h3>ii–V–I in F — Gm7 → C7 → Fmaj7</h3>
+  <table>
+    <thead><tr><th>Chord</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td>Gm7</td><td>B♭</td><td>F</td></tr>
+      <tr><td>C7</td><td>E</td><td>B♭</td></tr>
+      <tr><td>Fmaj7</td><td>A</td><td>E</td></tr>
+    </tbody>
+  </table>
+  <pre><code>Line A (3→7→3):  B♭ →  B♭ →  A     (glued B♭, then ½-step to A)
+Line B (7→3→7):  F  →  E  →  E     (½-step F→E, then glued E)</code></pre>
+
+  <h3>ii–V–I in B♭ — Cm7 → F7 → B♭maj7</h3>
+  <table>
+    <thead><tr><th>Chord</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td>Cm7</td><td>E♭</td><td>B♭</td></tr>
+      <tr><td>F7</td><td>A</td><td>E♭</td></tr>
+      <tr><td>B♭maj7</td><td>D</td><td>A</td></tr>
+    </tbody>
+  </table>
+  <pre><code>Line A (3→7→3):  E♭ →  E♭ →  D     (glued E♭, then ½-step to D)
+Line B (7→3→7):  B♭ →  A  →  A     (½-step B♭→A, then glued A)</code></pre>
+
+  <h3>ii–V–I in E♭ — Fm7 → B♭7 → E♭maj7</h3>
+  <table>
+    <thead><tr><th>Chord</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td>Fm7</td><td>A♭</td><td>E♭</td></tr>
+      <tr><td>B♭7</td><td>D</td><td>A♭</td></tr>
+      <tr><td>E♭maj7</td><td>G</td><td>D</td></tr>
+    </tbody>
+  </table>
+  <pre><code>Line A (3→7→3):  A♭ →  A♭ →  G     (glued A♭, then ½-step to G)
+Line B (7→3→7):  E♭ →  D  →  D     (½-step E♭→D, then glued D)</code></pre>
+
+  <h3>ii–V–I in A♭ — B♭m7 → E♭7 → A♭maj7</h3>
+  <table>
+    <thead><tr><th>Chord</th><th>3rd</th><th>7th</th></tr></thead>
+    <tbody>
+      <tr><td>B♭m7</td><td>D♭</td><td>A♭</td></tr>
+      <tr><td>E♭7</td><td>G</td><td>D♭</td></tr>
+      <tr><td>A♭maj7</td><td>C</td><td>G</td></tr>
+    </tbody>
+  </table>
+  <pre><code>Line A (3→7→3):  D♭ →  D♭ →  C     (glued D♭, then ½-step to C)
+Line B (7→3→7):  A♭ →  G  →  G     (½-step A♭→G, then glued G)</code></pre>
+
+  <h2>How to drill this (5 minutes)</h2>
+  <ol>
+    <li>Call a ii–V–I in any key. Say the three chords out loud.</li>
+    <li>Name the <strong>3rd and 7th of the ii chord</strong> (Week 2 reflex).</li>
+    <li>Predict the rest with the formula — <em>don't</em> recompute each chord: the 3rd is held into the next 7th; the 7th falls a half-step into the next 3rd.</li>
+    <li>Check yourself against the pattern, then play both lines on the guitar.</li>
+  </ol>
+  <p>When you can <em>predict</em> the line instead of working it out, you've internalized the formula — and that's the reflex Week 6 is really after.</p>
+
+  <!-- lesson-nav -->
+  <nav style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin:2.8em 0 0;font-family:system-ui,-apple-system,sans-serif;font-size:.86em;font-weight:600;">
+    <a href="week-06-guide-tone-lines.html" style="display:inline-block;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--accent);text-decoration:none;">&larr; Week 6: Guide-Tone Lines</a>
+    <a href="index.html" style="flex:1;text-align:center;color:var(--muted);text-decoration:none;">All lessons</a>
+    <a href="week-07-chromatic-approach.html" style="display:inline-block;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--accent);text-decoration:none;">Week 7: Chromatic Approach &rarr;</a>
+  </nav>
+  <p class="print-hint">The Recall Gap · Week 6 Companion — The Guide-Tone Formula</p>
+</article>
+</body>
+</html>

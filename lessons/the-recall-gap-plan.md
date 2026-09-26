@@ -122,7 +122,7 @@ This roadmap is the *long-term* view. Each week has its own detailed, self-conta
 
 **Phase 2 · Connecting & phrasing**
 5. [Chord-Tone Targeting](week-05-chord-tone-targeting.md)
-6. [Guide-Tone Lines Through Changes](week-06-guide-tone-lines.md)
+6. [Guide-Tone Lines Through Changes](week-06-guide-tone-lines.md) — ↳ companion: [The Guide-Tone Formula](week-06-companion-guide-tone-formula.md)
 7. [Chromatic Approach Notes](week-07-chromatic-approach.md)
 8. [Motif Development](week-08-motif-development.md)
 
